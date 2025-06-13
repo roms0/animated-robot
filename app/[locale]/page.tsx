@@ -23,7 +23,7 @@ export default function Home() {
     <Container size={'3'} p={'5'} pt={'0'}>
 
       {/* MISSION */}
-      <Section pt={'1'}>
+      <Section>
         <Flex height={'100%'} gap={'2'} wrap={'wrap'} pt={'8'} pb={'8'} direction={{initial: 'column'}}>
           <Box style={{textAlign: 'center'}}>
             <ShineHeading />
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         </Section>
         <Section>
-        <Grid columns={{initial: '2', lg: '3'}} gap={'4'}>
+        <Grid columns={{initial: '2', lg: '3'}} gap={'9'}>
           {features.map((key) => (
             <Flex key={key} flexBasis={'180px'} direction={'column'} gap={'3'}>
               <Heading size={'2'} >{main(`features.${key}.title`)}</Heading>

@@ -56,11 +56,11 @@ export const DesktopMenu = () => {
         <NavigationMenu.Root  className={styles.Root}>
 			<NavigationMenu.List  className={styles.MenuList}>
 				<NavigationMenu.Item className={styles.Title}>
-					<Text color="gray" weight={'bold'}>smart machines</Text>
+					<Text  weight={'bold'}>smart machines</Text>
 				</NavigationMenu.Item>
 				<NavigationMenu.Item>
 					<NavigationMenu.Trigger className={styles.Trigger}>
-						<Text size={'3'} weight={'bold'}>{navbar('products')}</Text> <CaretDownIcon className={styles.CaretDown} aria-hidden />
+						<Text size={'3'}>{navbar('products')}</Text> <CaretDownIcon className={styles.CaretDown} aria-hidden />
 					</NavigationMenu.Trigger>
 						<NavigationMenu.Content className={styles.Content}>
 							<Flex width={{ initial: '100%', xs: '600px'}} wrap={'wrap'} gap={'6'} p={'3'}>
@@ -93,7 +93,7 @@ export const DesktopMenu = () => {
 				</NavigationMenu.Item>
 				<NavigationMenu.Item>
 					<NavigationMenu.Trigger className={styles.Trigger}>
-						<Text size={'3'} weight={'bold'}>{navbar('lang title')}</Text> <CaretDownIcon className={styles.CaretDown} aria-hidden />
+						<Text size={'3'}>{navbar('lang title')}</Text> <CaretDownIcon className={styles.CaretDown} aria-hidden />
 					</NavigationMenu.Trigger>
 					<NavigationMenu.Content className={styles.Content}>
 							<ul className={styles.Languages}>
