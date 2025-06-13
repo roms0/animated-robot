@@ -1,0 +1,22 @@
+@import "@radix-ui/themes/styles.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --font-size-7: 30px;
+  --heading-line-height-7: 30px;
+  --font-size-8: 50px;
+  --heading-line-height-8: 50px;
+  --font-size-9: 65px;
+  --heading-line-height-9: 65px;
+}
+
+.radix-themes {
+  --default-font-family: var(--font-golos);
+}
+
+body {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="1" cy="1" r="1" fill="lightgray"/></svg>');
+  background-size: 40px 40px; /* Must match SVG dimensions */
+}

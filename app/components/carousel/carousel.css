@@ -1,0 +1,11 @@
+.orbiting-image {
+  offset-path: circle(40px at center);
+  offset-distance: calc(var(--start) * 100%);
+  animation: orbit 8s ease-in-out infinite;
+  transform: rotate(calc(-90deg - 360deg * var(--start)));
+  opacity: 0.5;
+}
+
+@keyframes orbit {
+  to { offset-distance: calc(var(--start) * 100% + 100%);  transform: rotate(calc(-360deg - 90deg - var(--start) * 360deg))}
+}

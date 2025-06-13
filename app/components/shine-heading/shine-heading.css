@@ -1,0 +1,23 @@
+
+.accent {
+    background: -webkit-linear-gradient(240deg, var(--blue-5) 0%, var(--sky-6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: var(--space-2);
+    animation: 
+    3s linear 1s infinite normal none running shines;
+}
+
+
+
+@keyframes shines {
+    from {
+        filter: saturate(0.6)
+    }
+    50% {
+        filter: saturate(2)
+    }
+    to {
+        filter: saturate(0.6)
+    }
+}

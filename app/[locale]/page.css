@@ -1,0 +1,27 @@
+
+.cta {
+    p {
+        background: -webkit-linear-gradient(240deg, var(--plum-9) 10%, var(--blue-10) 90%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: 
+        /* 1s ease-in 0s 1 normal forwards running enable,  */
+        3s linear 1s infinite normal none running shines;
+        /* font-family: monospace; */
+        font-weight: 600;
+    }
+}
+
+
+
+@keyframes shines {
+    from {
+        filter: saturate(0.6)
+    }
+    50% {
+        filter: saturate(2)
+    }
+    to {
+        filter: saturate(0.6)
+    }
+}

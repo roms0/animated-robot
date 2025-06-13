@@ -1,0 +1,56 @@
+{
+  "long": "1",
+  "main": {
+    "title": "smart machines",
+    "catch": {
+      "first": "ml инструменты",
+      "union": "для",
+      "target": "мультимодальной логистики"
+    },
+    "mission": "Начните более эффективно использовать ресурсы логистики и увеличьте прибыль бизнеса",
+    "callout": "Напишите нам",
+    "features": {
+      "parameters": {
+        "title": "30+ Метрик",
+        "description": "Наибольшее количество параметров при расчете оптимальных решений логистических задач. Для каждой задачи свои ключевые параметры"
+      },
+      "usage": {
+        "title": "Удобные интеграции",
+        "description": "API интеграции для слаженных технических команд. Smart machines клиент для общего использования. Команда опытных специалистов всегда готовая помочь"
+      },
+      "payment": {
+        "title": "Гибкая оплата",
+        "description": "Платите только за те решения, которыми вы пользуетесь"
+      }
+    }
+  },
+  "navbar": {
+    "products": "products",
+    "solutions": "solutions",
+    "support": "support",
+    "ui": "smart machines client",
+    "developers": "developers",
+    "lang": "ru",
+    "lang title": "Русский"
+  },
+  "miles": {
+    "title": "miles",
+    "short": "reach out your clients faster",
+    "mission": "you know where your clients are, we show the most efficient way. a range and a scale are no concern. ship fast, know what to change and why, draw a full picture and be aware of details. grow in revenue with us."
+  },
+  "highways": {
+    "title": "highways",
+    "short": "reach out your clients faster",
+    "mission": "lots of facilities build your logistics. each has capacities and demands, schedules and log"
+  },
+  "cargo": {
+    "title": "cargo",
+    "short": "reach out your clients faster",
+    "mission": "you have a fleet. let us help you utilise it in the best way possible. arrange your cargo, manage disposables and cut your costs."
+  },
+  "broker": {
+    "title": "broker",
+    "short": "reach out your clients faster",
+    "mission": "assign tasks and fill invoices faster. automate required routines and needs for you business to earn money."
+  }
+}
