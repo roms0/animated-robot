@@ -1,6 +1,6 @@
 
 .accent {
-    background: -webkit-linear-gradient(240deg, var(--pink-9) 0%, var(--violet-8) 100%);
+    background: -webkit-linear-gradient(75deg, var(--violet-10) 20%, var(--plum-10) 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: var(--space-2);

@@ -4,12 +4,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  --font-size-7: 30px;
-  --heading-line-height-7: 30px;
-  --font-size-8: 50px;
-  --heading-line-height-8: 50px;
-  --font-size-9: 65px;
-  --heading-line-height-9: 65px;
 }
 
 .radix-themes {

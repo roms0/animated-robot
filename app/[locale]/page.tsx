@@ -6,6 +6,9 @@ import { Carousel } from "../components/carousel/carousel";
 import { ShineHeading } from "../components/shine-heading/shine-heading";
 import Image from "next/image";
 import { CopyIcon } from "@radix-ui/react-icons";
+import { BaseGrid } from "../blocks/base-grid";
+import { BaseStack, BaseStage } from "../blocks/base-stack";
+import { BaseColumn } from "../blocks/base-column";
 
 
 export default function Home() {
@@ -15,56 +18,49 @@ export default function Home() {
   const callout = main('callout')
   const features = ['parameters', 'usage', 'payment'] as const
 
-
-  const long_languages = locale === 'ru'
-
-
   return (
-    <Container size={'3'} p={'5'} pt={'0'}>
-
+    <Container pl="6" pr="6" >
       {/* MISSION */}
       <Section>
-        <Flex height={'100%'} gap={'2'} wrap={'wrap'} pt={'8'} pb={'8'} direction={{initial: 'column'}}>
-          <Box style={{textAlign: 'center'}}>
+        <BaseColumn>
             <ShineHeading />
-          </Box>
-          <Box style={{textAlign: 'center'}}>
-            <Text mt="4" color="gray" weight={'medium'} align={'left'} size={{initial: '2'}}>{mission}</Text>
-          </Box>
-        </Flex>
+            <Text  align={'center'}>{mission}</Text>
+        </BaseColumn>
       </Section>
-
-      <Section pt={"2"}>
-          <div style={{display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: '1fr', placeItems: 'center'}}>
-          <div style={{gridRowStart: '1', gridRowEnd: '2', gridColumnStart: '1', gridColumnEnd: '2', zIndex: '1', transform: 'translateY(-80px)'}}>
-            <Heading size={'2'}>{callout}</Heading>
-          </div>
-          <div style={{gridRowStart: '1', gridRowEnd: '2', gridColumnStart: '1', gridColumnEnd: '2', zIndex: '-1'}}>
-            <Box >
-              <Carousel />
-            </Box>
-          </div>
-          <div style={{gridRowStart: '1', gridRowEnd: '2', gridColumnStart: '1', gridColumnEnd: '2', zIndex: '1'}}>
-              <Button className="cta" radius={'medium'} variant="surface" size={'4'}>
-                <CopyIcon width={20} height={20} />
-                <p>info@smartmachines.pro</p>
-              </Button>
-          </div>
-        </div>
-        </Section>
-        <Section>
-        <Grid columns={{initial: '2', lg: '3'}} gap={'9'}>
+      {/* CTA */}
+      <Section>
+        <BaseColumn>
+          <Text size={'1'}>{callout}</Text>
+          <BaseStack>
+              <BaseStage asChild stage={-1}>
+                <Box>
+                  <Carousel />
+                </Box>
+              </BaseStage>
+              <BaseStage asChild stage={1}>
+                <Box>
+                  <Button className="cta" radius={'medium'} variant="surface">
+                    <CopyIcon width={20} height={20} />
+                    <p>info@smartmachines.pro</p>
+                  </Button>
+                </Box>
+              </BaseStage>
+            </BaseStack>
+          </BaseColumn>
+      </Section>
+      {/* FEATURES */}
+      <Section>
+        <BaseGrid>
           {features.map((key) => (
-            <Flex key={key} flexBasis={'180px'} direction={'column'} gap={'3'}>
-              <Heading size={'2'} >{main(`features.${key}.title`)}</Heading>
-              <Text size={'2'} color="gray" weight={'medium'}>{main(`features.${key}.description`)}</Text>
+            <Flex key={key} direction={'column'} gap={'2'}>
+              <Text weight={'bold'} >{main(`features.${key}.title`)}</Text>
+              <Text>{main(`features.${key}.description`)}</Text>
             </Flex>
           ))}
-        </Grid>
+        </BaseGrid>
       </Section>
 
     </Container>
-
     
   );
 }

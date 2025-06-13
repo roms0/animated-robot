@@ -5,7 +5,7 @@ import Image from "next/image"
 import './carousel.css'
 
 export const Carousel = () => {
-    const size = 22
+    const size = 14
     return (
             <>
               <Image
