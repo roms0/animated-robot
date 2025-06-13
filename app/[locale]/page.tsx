@@ -25,15 +25,16 @@ export default function Home() {
       {/* MISSION */}
       <Section pt={'1'}>
         <Flex height={'100%'} gap={'2'} wrap={'wrap'} pt={'8'} pb={'8'} direction={{initial: 'column'}}>
-          <Box>
+          <Box style={{textAlign: 'center'}}>
             <ShineHeading />
           </Box>
-          <Text mt="4" color="gray" weight={'medium'} align={'left'} size={{initial: '2', lg: '4'}}>{mission}</Text>
+          <Box style={{textAlign: 'center'}}>
+            <Text mt="4" color="gray" weight={'medium'} align={'left'} size={{initial: '2'}}>{mission}</Text>
+          </Box>
         </Flex>
       </Section>
 
-      <Section pt={"1"}>
-        <Flex direction={{initial: 'column', lg: 'row'}} gap={"9"}>
+      <Section pt={"2"}>
           <div style={{display: 'grid', gridTemplateColumns: '1fr', gridTemplateRows: '1fr', placeItems: 'center'}}>
           <div style={{gridRowStart: '1', gridRowEnd: '2', gridColumnStart: '1', gridColumnEnd: '2', zIndex: '1', transform: 'translateY(-80px)'}}>
             <Heading size={'2'}>{callout}</Heading>
@@ -50,15 +51,16 @@ export default function Home() {
               </Button>
           </div>
         </div>
-        <Grid columns={'1'} gap={'6'}>
+        </Section>
+        <Section>
+        <Grid columns={{initial: '2', lg: '3'}} gap={'4'}>
           {features.map((key) => (
             <Flex key={key} flexBasis={'180px'} direction={'column'} gap={'3'}>
               <Heading size={'2'} >{main(`features.${key}.title`)}</Heading>
-              <Text color="gray" weight={'medium'}>{main(`features.${key}.description`)}</Text>
+              <Text size={'2'} color="gray" weight={'medium'}>{main(`features.${key}.description`)}</Text>
             </Flex>
           ))}
         </Grid>
-        </Flex>
       </Section>
 
     </Container>
