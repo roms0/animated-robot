@@ -2,17 +2,17 @@
 
 import { Box } from "@radix-ui/themes";
 import * as React from "react";
-import { AdvantagesDesktop } from "./advantages-desktop";
-import { AdvantagesMobile } from "./advantages-mobile";
+import { UsageMobile } from "./usage-mobile";
+import { UsageDesktop } from "./usage-desktop";
 
-export const Advantages = () => {
+export const Usage = () => {
 	return (
 		<>
 			<Box display={{initial: 'none', sm: 'block'}}>
-				<AdvantagesDesktop />
+				<UsageDesktop />
 			</Box>
 			<Box display={{initial: 'block', sm: 'none'}}>
-				<AdvantagesMobile />
+				<UsageMobile />
 			</Box>
 		</>
 	);

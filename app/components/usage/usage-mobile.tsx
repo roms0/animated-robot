@@ -1,17 +1,17 @@
-
 'use client';
 
 import { Box, Button, Flex, Heading, Text } from "@radix-ui/themes";
 import { MetricsUp } from "../metrics-up/metrics-up";
 import { motion } from "motion/react";
+import { CodeIcon, FrameIcon, GearIcon } from "@radix-ui/react-icons";
 
 
-export const AdvantagesMobile = () => {
+export const UsageMobile = () => {
     return (
         <Flex direction={'column'} gap={'6'}>
             <Flex direction={'column'} gap={'2'}>
-            <Heading align={'center'} size={'3'}>Multimodal</Heading>
-            <Text size={'1'} align={'center'}>Solutions for both highways and railroads</Text>
+            <Heading align={'center'} size={'3'}>Multichannel</Heading>
+            <Text size={'1'} align={'center'}>Browse API docs or use UI</Text>
             </Flex>
             <Flex  align={'center'}>
                 <Box asChild flexBasis={'46px'} flexShrink={'0'} 
@@ -21,7 +21,7 @@ export const AdvantagesMobile = () => {
                     animate={{ transform: "translateX(0px)" }}
                     transition={{ type: "tween", delay: 0.5 }}
                     >
-                    <Heading weight={'medium'} size={'4'} color="violet"><MetricsUp value={11}/>%</Heading>
+                    <GearIcon style={{ width: '20px', height: '20px'}} />
                     </motion.div>
                 </Box>
                 <Box asChild flexGrow={'1'}>
@@ -30,7 +30,7 @@ export const AdvantagesMobile = () => {
                     animate={{ transform: "translateX(0px)", opacity: 1 }}
                     transition={{ type: "tween", delay: 0.5 }}
                     >
-                    <Text>Decrease transportaion costs for automobile logisics <Button variant='surface' size={'1'} color="cyan">see products</Button></Text>
+                    <Text>API available for tech teams. Pay as you scale <Button variant='surface' size={'1'} color="gray">browse Docs</Button></Text>
                     </motion.div>
                 </Box>
             </Flex>
@@ -42,7 +42,7 @@ export const AdvantagesMobile = () => {
                     animate={{ transform: "translateX(0px)" }}
                     transition={{ type: "tween", delay: 0.6 }}
                     >
-                    <Heading size={'4'} weight={'medium'} color="violet"><MetricsUp value={8}/>%</Heading>
+                    <FrameIcon style={{ width: '20px', height: '20px'}} />
                     </motion.div>
                 </Box>
                 <Box asChild flexGrow={'1'}>
@@ -51,7 +51,7 @@ export const AdvantagesMobile = () => {
                     animate={{ transform: "translateX(0px)", opacity: 1 }}
                     transition={{ type: "tween", delay: 0.6 }}
                     >
-                    <Text>Increase car utilization rate for railroad operators <Button variant='surface' size={'1'} color="blue">see products</Button></Text>
+                    <Text>Client UI is to be released soon <Button variant='surface' size={'1'} color="gray">request a demo</Button></Text>
                     </motion.div>
                 </Box>
             </Flex>

@@ -4,6 +4,7 @@ import { Navigation } from "../components/navigation";
 import { Container, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from 'next/font/google'
+import { ThemeProvider } from "next-themes";
  
 const golos = Golos_Text({
   subsets: ['latin', 'cyrillic'],
@@ -26,15 +27,17 @@ export default async function RootLayout({
 }>) {
   const {locale} = await params;
   return (
-    <html lang={locale} className={`${golos.variable}`}>
+    <html lang={locale} className={`${golos.variable}`} suppressHydrationWarning>
         <body>
           <NextIntlClientProvider>
-            <Theme appearance="light" hasBackground={false}>
-              <Container position={'relative'} overflowX={'hidden'} pl="6" pr="6" size={'3'}>
-                <Navigation />
-                {children}
-              </Container>
-            </Theme>
+            <ThemeProvider attribute={'class'}>
+              <Theme hasBackground={false}>
+                <Container position={'relative'} overflowX={'hidden'} pl="6" pr="6" size={'3'}>
+                  <Navigation />
+                  {children}
+                </Container>
+              </Theme>
+            </ThemeProvider>
           </NextIntlClientProvider>
         </body>
     </html>

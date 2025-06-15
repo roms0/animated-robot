@@ -2,23 +2,46 @@
 'use client';
 
 import { BaseColumn } from "@/app/blocks/base-column";
-import { Box, Flex, Heading, Text } from "@radix-ui/themes";
+import { Box, Button, Flex, Heading, Text } from "@radix-ui/themes";
 import { MetricsUp } from "../metrics-up/metrics-up";
+import Image from "next/image";
+import { Carousel } from "../carousel/carousel";
 
 export const AdvantagesDesktop = () => {
     return (
-        <BaseColumn>
-          <Text weight={'medium'}>Our solutions deliver value to multimodal chains</Text>
-          <Flex mt="4" justify={'center'} gap={'6'}>
-            <Box>
-              <Heading weight={'medium'} align={'center'} ><MetricsUp value={11}/>%</Heading>
-              <Text align={'center'} >Transportaion costs reduce for <span>auto logistics</span></Text>
-            </Box>
-            <Box>
-              <Heading weight={'medium'} align={'center'} ><MetricsUp value={8}/>%</Heading>
-              <Text align={'center'} >Cars utilization rate for <span>railroad operators</span></Text>
-            </Box>
-          </Flex>
-        </BaseColumn>
+        <Flex gap={'4'} justify={'center'}>
+            <Flex flexBasis={'20%'} direction={'column'}>
+                <Box>
+                    <Heading size={'5'}>multi</Heading>
+                    <Heading size={'5'}>modal</Heading>
+                </Box>
+            </Flex>
+            <Flex flexBasis={'50%'} justify={'center'} gap={'4'}>
+                <Flex flexBasis={'50%'} gap={'4'}>
+                    <Flex direction={'column'} gap={'4'}>
+                        <Box>
+                            <Heading weight={'medium'} ><MetricsUp value={11}/>%</Heading>
+                            <Text align={'center'} >Transportaion costs reduce for auto logistics</Text>
+                        </Box>
+                        <Image alt="truck" width={100} style={{ objectFit: 'cover'}} height={50} src={'/smart-truck-trans.png'} />
+                        <Box>
+                            <Button variant='surface' size={'1'} color="cyan">see products</Button>
+                        </Box>
+                    </Flex>
+                </Flex>
+                <Flex flexBasis={'50%'} gap={'4'}>
+                    <Flex direction={'column'} gap={'4'}>
+                        <Box>
+                            <Heading weight={'medium'} ><MetricsUp value={8}/>%</Heading>
+                            <Text align={'center'} >Cars utilization rate for railroad operators</Text>
+                        </Box>
+                        <Image alt="truck" width={100} style={{ objectFit: 'cover'}} height={50} src={'/smart-railroad-trans.png'} />
+                        <Box>
+                            <Button variant='surface' size={'1'} color="blue">see products</Button>
+                        </Box>
+                    </Flex>
+                </Flex>
+            </Flex>
+        </Flex>
     )
 }
