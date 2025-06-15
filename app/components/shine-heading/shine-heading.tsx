@@ -14,15 +14,15 @@ export const ShineHeading = () => {
         <Box>
             <Heading asChild size={headingScale} weight={'medium'}>
                 <motion.h1 
-                initial={{ transform: "translateX(-300px)" }}
-                animate={{ transform: "translateX(0px)" }}
+                initial={{ transform: "translateX(-300px)", opacity: 0 }}
+                animate={{ transform: "translateX(0px)", opacity: 1 }}
                 transition={{ type: "tween" }}
                 >{main('catch.first')}</motion.h1>
             </Heading>
             <Heading asChild size={headingScale} weight={'medium'}>
                 <motion.h1 
-                initial={{ transform: "translateX(300px)" }}
-                animate={{ transform: "translateX(0px)" }}
+                initial={{ transform: "translateX(300px)", opacity: 0 }}
+                animate={{ transform: "translateX(0px)", opacity: 1 }}
                 transition={{ type: "tween", delay: 0.3 }}
                 >
                 {main('catch.union')} <span className="accent">{main('catch.target')} </span>
