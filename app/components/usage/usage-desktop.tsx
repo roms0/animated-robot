@@ -15,7 +15,7 @@ export const UsageDesktop = () => {
                             <Heading size={'5'}>channel</Heading>
                         </Box>
                     </Flex>
-                    <Flex flexBasis={'50%'} justify={'center'} gap={'4'}>
+                    <Flex flexBasis={'70%'} justify={'center'} gap={'9'}>
                         <Flex flexBasis={'50%'} gap={'4'}>
                             <Flex direction={'column'} gap={'4'}>
                                 <Box>

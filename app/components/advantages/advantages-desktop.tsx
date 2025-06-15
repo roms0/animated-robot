@@ -16,12 +16,12 @@ export const AdvantagesDesktop = () => {
                     <Heading size={'5'}>modal</Heading>
                 </Box>
             </Flex>
-            <Flex flexBasis={'50%'} justify={'center'} gap={'4'}>
+            <Flex flexBasis={'70%'} justify={'center'} gap={'9'}>
                 <Flex flexBasis={'50%'} gap={'4'}>
                     <Flex direction={'column'} gap={'4'}>
                         <Box>
-                            <Heading weight={'medium'} ><MetricsUp value={11}/>%</Heading>
-                            <Text align={'center'} >Transportaion costs reduce for auto logistics</Text>
+                            <Heading weight={'medium'} >+ <MetricsUp value={11}/>%</Heading>
+                            <Text align={'center'} >to revenue cutting transportation costs for autumobile logistics</Text>
                         </Box>
                         <Image alt="truck" width={100} style={{ objectFit: 'cover'}} height={50} src={'/smart-truck-trans.png'} />
                         <Box>
@@ -32,8 +32,8 @@ export const AdvantagesDesktop = () => {
                 <Flex flexBasis={'50%'} gap={'4'}>
                     <Flex direction={'column'} gap={'4'}>
                         <Box>
-                            <Heading weight={'medium'} ><MetricsUp value={8}/>%</Heading>
-                            <Text align={'center'} >Cars utilization rate for railroad operators</Text>
+                            <Heading weight={'medium'} >+ <MetricsUp value={8}/>%</Heading>
+                            <Text align={'center'} >Cargo cars utilization rate for railroad operators</Text>
                         </Box>
                         <Image alt="truck" width={100} style={{ objectFit: 'cover'}} height={50} src={'/smart-railroad-trans.png'} />
                         <Box>
