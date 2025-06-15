@@ -2,7 +2,7 @@
   offset-distance: calc(var(--start) * 100%);
   animation: orbit 5s linear infinite;
   transform: rotate(calc(-90deg - 360deg * var(--start)));
-  offset-path: circle(20px at center);
+  offset-path: circle(30px at center);
 }
 
 @keyframes orbit {

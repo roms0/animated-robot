@@ -8,11 +8,11 @@ import { MobileMenu } from "./mobile-menu";
 export const Navigation = () => {
 	return (
 		<>
-			<Container display={{initial: 'none', md: 'initial'}} size={'3'} pl={'5'} pr={'5'}>
+			<Container display={{initial: 'none', md: 'initial'}} pl={'6'} pr={'6'}>
 				<DesktopMenu />
 			</Container>
-			<Container display={{initial: 'initial', md: 'none'}} size={'3'}>
-				{/* <MobileMenu /> */}
+			<Container display={{initial: 'initial', md: 'none'}} mt="3" pl={'6'} pr={'6'}>
+				<DesktopMenu />
 			</Container>
 		</>
 	);

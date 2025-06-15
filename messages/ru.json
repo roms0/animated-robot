@@ -1,19 +1,15 @@
 {
   "long": "1",
   "main": {
-    "title": "smart machines",
+    "title": "smartmachines",
     "catch": {
       "first": "ml инструменты",
       "union": "для",
-      "target": "мультимодальной логистики"
+      "target": "грузовой логистики"
     },
     "mission": "Оптимизируйте логистику и увеличьте прибыль бизнеса",
     "callout": "Скопируйте адрес, напишите нам, будем работать вместе",
-    "features": {
-      "parameters": {
-        "title": "30+ Метрик",
-        "description": "Наибольшее количество параметров при расчете оптимальных решений логистических задач. Для каждой задачи свои ключевые параметры"
-      },
+    "collaboration": {
       "usage": {
         "title": "Удобные интеграции",
         "description": "API интеграции для слаженных технических команд. Smart machines клиент для общего использования. Команда опытных специалистов всегда готовая помочь"
@@ -22,10 +18,28 @@
         "title": "Гибкая оплата",
         "description": "Платите только за те решения, которыми вы пользуетесь"
       }
+    },
+    "features": {
+      "multimodal": {
+        "title": "Multimodal",
+        "description": "Solutions crafted for small courier deliveries and large enterprises which long supply chains varies in transport types"
+      },
+      "usage": {
+        "title": "Удобные интеграции",
+        "description": "API интеграции для слаженных технических команд. Smart machines клиент для общего использования. Команда опытных специалистов всегда готовая помочь"
+      },
+      "payment": {
+        "title": "Гибкая оплата",
+        "description": "Платите только за те решения, которыми вы пользуетесь"
+      },
+      "parameters": {
+        "title": "30+ Метрик",
+        "description": "Наибольшее количество параметров при расчете оптимальных решений логистических задач. Для каждой задачи свои ключевые параметры"
+      }
     }
   },
   "navbar": {
-    "products": "products",
+    "products": "Продукты",
     "solutions": "solutions",
     "support": "support",
     "ui": "smart machines client",

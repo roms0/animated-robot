@@ -1,11 +1,10 @@
 'use client'
 
-import { Box } from "@radix-ui/themes"
 import Image from "next/image"
 import './carousel.css'
 
 export const Carousel = () => {
-    const size = 14
+    const size = 18
     return (
             <>
               <Image

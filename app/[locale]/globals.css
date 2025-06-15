@@ -8,9 +8,10 @@
 
 .radix-themes {
   --default-font-family: var(--font-golos);
+  --line-height-1: 2px;
 }
 
 body {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="1" cy="1" r="1" fill="lightgray"/></svg>');
-  background-size: 40px 40px; /* Must match SVG dimensions */
+  /* background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><circle cx="1" cy="1" r="1" fill="lightgray"/></svg>');
+  background-size: 40px 40px;  */
 }

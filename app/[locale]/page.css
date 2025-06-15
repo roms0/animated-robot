@@ -1,5 +1,7 @@
 
 .cta {
+    border-radius: var(--radius-4);
+    animation: 2s linear 2s infinite normal none running draw;
     p {
         background: -webkit-linear-gradient(240deg, var(--plum-9) 10%, var(--blue-10) 90%);
         -webkit-background-clip: text;
@@ -12,7 +14,23 @@
     }
 }
 
-
+@keyframes draw {
+    from {
+        transform: scale(1);
+    }
+    2% {
+        transform: scale(1.02);
+    }
+    6% {
+        transform: scale(1);
+    }
+    8% {
+        transform: scale(1.02);
+    }
+    12% {
+        transform: scale(1);
+    }
+}
 
 @keyframes shines {
     from {

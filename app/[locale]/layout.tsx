@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navigation } from "../components/navigation";
-import { Theme } from "@radix-ui/themes";
+import { Container, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from 'next/font/google'
  
@@ -26,12 +26,14 @@ export default async function RootLayout({
 }>) {
   const {locale} = await params;
   return (
-    <html lang={locale} className={golos.variable}>
+    <html lang={locale} className={`${golos.variable}`}>
         <body>
           <NextIntlClientProvider>
-            <Theme hasBackground={false}>
-              {/* <Navigation /> */}
-              {children}
+            <Theme appearance="light" hasBackground={false}>
+              <Container position={'relative'} overflowX={'hidden'} pl="6" pr="6" size={'3'}>
+                <Navigation />
+                {children}
+              </Container>
             </Theme>
           </NextIntlClientProvider>
         </body>

@@ -1,19 +1,15 @@
 {
   "long": "0",
   "main": {
-    "title": "smart machines",
+    "title": "smartmachines",
     "catch": {
       "first": "ml tooling",
       "union": "for",
-      "target": "multimodal logistics"
+      "target": "transport logistics"
     },
-    "mission": "Build effective routes and cargo arrangements, streamline invoicing - make higher revenues.",
+    "mission": "Create effective pipelines & automate routine",
     "callout": "Contact us and let's collaborate",
-    "features": {
-      "parameters": {
-        "title": "30+ Parameters",
-        "description": "Best granularity and prescision for high class analysis while keep simplicity in usage"
-      },
+    "collaboration": {
       "usage": {
         "title": "For anyone",
         "description": "API solutions for tech teams, Smart machines client for UI usage, top specialists ready to answer your challenge"
@@ -22,10 +18,28 @@
         "title": "Pay as you go",
         "description": "Start from soft adoption, find your points of interest and scale when you ready"
       }
+    },
+    "features": {
+      "multimodal": {
+        "title": "Multimodal",
+        "description": "Solutions crafted for small courier deliveries and large enterprises which long supply chains varies in transport types"
+      },
+      "usage": {
+        "title": "For anyone",
+        "description": "API solutions for tech teams, Smart machines client for UI usage, top specialists ready to answer your challenge"
+      },
+      "payment": {
+        "title": "Pay as you go",
+        "description": "Start from soft adoption, find your points of interest and scale when you ready"
+      },
+      "parameters": {
+        "title": "30+ Parameters",
+        "description": "Best granularity and prescision for high class analysis while keep simplicity in usage"
+      }
     }
   },
   "navbar": {
-    "products": "products",
+    "products": "Products",
     "solutions": "solutions",
     "support": "support",
     "ui": "smart machines client",
