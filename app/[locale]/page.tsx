@@ -19,9 +19,9 @@ export default function Home() {
             <ShineHeading />
             <Box maxWidth={'600px'}>
               <Text>crafted by high class mathematicians, data-scientists and logistitians from</Text>
-              <Button mt="9" size={'2'} className="cta" radius={'medium'} color='blue' variant="soft">
-                <CopyIcon width={20} height={20} />
+              <Button mt="9" size={'2'} className="cta" radius={'medium'}  variant="outline">
                 <p>info@smartmachines.pro</p>
+                <CopyIcon width={20} height={20} />
               </Button>
             </Box>
               <Text size="1">Click and copy the address. Let's cooperate</Text>

@@ -13,7 +13,7 @@ export const MetricsUp = ({ value, duration = 2}: MetricsProps) => {
     const ref: RefObject<HTMLElement | null> = useRef(null);
     const motionValue = useMotionValue(1);
     const springValue = useSpring(motionValue, {
-        mass: 1, stiffness: 100, damping: 10 
+        mass: 1, stiffness: 100, damping: 10
     });
 
 

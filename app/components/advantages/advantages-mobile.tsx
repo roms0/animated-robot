@@ -4,14 +4,15 @@
 import { Box, Button, Flex, Heading, Text } from "@radix-ui/themes";
 import { MetricsUp } from "../metrics-up/metrics-up";
 import { motion } from "motion/react";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 
 export const AdvantagesMobile = () => {
     return (
         <Flex direction={'column'} gap={'6'}>
             <Flex direction={'column'} gap={'2'}>
-            <Heading align={'center'} size={'3'}>Multimodal</Heading>
-            <Text size={'1'} align={'center'}>Solutions for both highways and railroads</Text>
+            <Heading align={'center'} size={'3'}>multimodal products</Heading>
+            <Text size={'1'} align={'center'}>that gains results</Text>
             </Flex>
             <Flex  align={'center'}>
                 <Box asChild flexBasis={'46px'} flexShrink={'0'} 
@@ -30,7 +31,7 @@ export const AdvantagesMobile = () => {
                     animate={{ transform: "translateX(0px)", opacity: 1 }}
                     transition={{ type: "tween", delay: 0.5 }}
                     >
-                    <Text>Decrease transportaion costs for automobile logisics <Button variant='surface' size={'1'} color="cyan">see products</Button></Text>
+                    <Text>to revenue cutting transportation costs for autumobile logistics <Button variant='surface' size={'1'} color="cyan">see products <ExternalLinkIcon /></Button></Text>
                     </motion.div>
                 </Box>
             </Flex>
@@ -51,7 +52,7 @@ export const AdvantagesMobile = () => {
                     animate={{ transform: "translateX(0px)", opacity: 1 }}
                     transition={{ type: "tween", delay: 0.6 }}
                     >
-                    <Text>Increase car utilization rate for railroad operators <Button variant='surface' size={'1'} color="blue">see products</Button></Text>
+                    <Text>to utilization rate of cargo cars for railroad operators <Button variant='surface' size={'1'} color="blue">see products <ExternalLinkIcon /></Button></Text>
                     </motion.div>
                 </Box>
             </Flex>

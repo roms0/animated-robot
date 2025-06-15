@@ -11,15 +11,14 @@ export const UsageDesktop = () => {
         <Flex gap={'4'} justify={'center'}>
                     <Flex flexBasis={'20%'} direction={'column'}>
                         <Box>
-                            <Heading size={'5'}>multi</Heading>
-                            <Heading size={'5'}>channel</Heading>
+                            <Heading size={'3'} weight={'medium'}>multichannel collaboration</Heading>
                         </Box>
                     </Flex>
                     <Flex flexBasis={'70%'} justify={'center'} gap={'9'}>
                         <Flex flexBasis={'50%'} gap={'4'}>
                             <Flex direction={'column'} gap={'4'}>
                                 <Box>
-                                    <Text align={'center'} >API available for tech teams. Pay as you scale</Text>
+                                    <Text align={'center'} >API available. Pay as you scale</Text>
                                 </Box>
                                 <Box>
                                     <Button variant='surface' size={'1'} color="gray">to docs</Button>

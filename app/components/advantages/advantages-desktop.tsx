@@ -6,14 +6,14 @@ import { Box, Button, Flex, Heading, Text } from "@radix-ui/themes";
 import { MetricsUp } from "../metrics-up/metrics-up";
 import Image from "next/image";
 import { Carousel } from "../carousel/carousel";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export const AdvantagesDesktop = () => {
     return (
         <Flex gap={'4'} justify={'center'}>
             <Flex flexBasis={'20%'} direction={'column'}>
                 <Box>
-                    <Heading size={'5'}>multi</Heading>
-                    <Heading size={'5'}>modal</Heading>
+                    <Heading size={'3'} weight={'medium'}>multimodal products that gains results</Heading>
                 </Box>
             </Flex>
             <Flex flexBasis={'70%'} justify={'center'} gap={'9'}>
@@ -25,7 +25,7 @@ export const AdvantagesDesktop = () => {
                         </Box>
                         <Image alt="truck" width={100} style={{ objectFit: 'cover'}} height={50} src={'/smart-truck-trans.png'} />
                         <Box>
-                            <Button variant='surface' size={'1'} color="cyan">see products</Button>
+                            <Button variant='surface' size={'1'} color="cyan">see products <ExternalLinkIcon /></Button>
                         </Box>
                     </Flex>
                 </Flex>
@@ -33,11 +33,11 @@ export const AdvantagesDesktop = () => {
                     <Flex direction={'column'} gap={'4'}>
                         <Box>
                             <Heading weight={'medium'} >+ <MetricsUp value={8}/>%</Heading>
-                            <Text align={'center'} >Cargo cars utilization rate for railroad operators</Text>
+                            <Text align={'center'}>to utilization rate of cargo cars for railroad operators</Text>
                         </Box>
                         <Image alt="truck" width={100} style={{ objectFit: 'cover'}} height={50} src={'/smart-railroad-trans.png'} />
                         <Box>
-                            <Button variant='surface' size={'1'} color="blue">see products</Button>
+                            <Button variant='surface' size={'1'} color="blue">see products <ExternalLinkIcon /></Button>
                         </Box>
                     </Flex>
                 </Flex>
