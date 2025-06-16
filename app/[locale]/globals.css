@@ -8,7 +8,6 @@
 
 .radix-themes {
   --default-font-family: var(--font-golos);
-  --line-height-1: 2px;
 }
 
 body {

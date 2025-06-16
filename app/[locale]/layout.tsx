@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navigation } from "../components/navigation";
-import { Container, Theme } from "@radix-ui/themes";
+import { Container, Text, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from 'next/font/google'
 import { ThemeProvider } from "next-themes";

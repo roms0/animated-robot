@@ -12,7 +12,7 @@ export const AdvantagesMobile = () => {
         <Flex direction={'column'} gap={'6'}>
             <Flex direction={'column'} gap={'2'}>
             <Heading align={'center'} size={'3'}>multimodal products</Heading>
-            <Text size={'1'} align={'center'}>that gains results</Text>
+            <Text size={'1'} align={'center'}>that gain results</Text>
             </Flex>
             <Flex  align={'center'}>
                 <Box asChild flexBasis={'46px'} flexShrink={'0'} 

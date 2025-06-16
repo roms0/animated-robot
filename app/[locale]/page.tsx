@@ -17,9 +17,9 @@ export default function Home() {
       <Section pt={'15vh'}>
         <BaseColumn>
             <ShineHeading />
-            <Box maxWidth={'600px'}>
-              <Text>crafted by high class mathematicians, data-scientists and logistitians from</Text>
-              <Button mt="9" size={'2'} className="cta" radius={'medium'}  variant="outline">
+            <Box mt="5" maxWidth={'600px'}>
+              <Text >crafted by high class mathematicians, data-scientists and logistitians from</Text>
+              <Button mt="2" size={'2'} className="cta" radius={'medium'}  variant="outline">
                 <p>info@smartmachines.pro</p>
                 <CopyIcon width={20} height={20} />
               </Button>
@@ -31,7 +31,7 @@ export default function Home() {
       <Section pt={'20vh'}>
           <Advantages />
       </Section>
-      <Section pt={'5vh'}>
+      <Section pt={'4vh'} mb={'10vh'}>
           <Usage />
       </Section>
     </>

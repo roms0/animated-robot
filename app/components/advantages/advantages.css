@@ -1,0 +1,14 @@
+.upscale {
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-2px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+}
