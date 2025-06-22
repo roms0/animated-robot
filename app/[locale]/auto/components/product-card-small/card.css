@@ -1,0 +1,12 @@
+.card-small-root {
+    background-color: var(--gray-2);
+    border-radius: var(--radius-3);
+    box-shadow: var(--custom-shadow);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    gap: var(--space-1);
+}
