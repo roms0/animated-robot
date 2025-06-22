@@ -6,11 +6,11 @@ export const ProductHeading = () => {
       <Flex justify={"center"}>
         <Box maxWidth={"330px"}>
           <Heading align={"center"} weight={"medium"} color="gray">
-            путь авто
+            путь
           </Heading>
           <Heading align={"center"}>
             пайплайн для логистики{" "}
-            <span className="farfetch">дорожной сети</span>
+            <span className="farfetch">железных дорог</span>
           </Heading>
         </Box>
       </Flex>

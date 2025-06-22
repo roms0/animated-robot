@@ -1,24 +1,25 @@
-import { Badge, Box, Button, Card, Flex, Text } from "@radix-ui/themes";
+import { Badge, Box, Button, Card, Flex, Grid, Text } from "@radix-ui/themes";
 import { ContainerIcon } from "./container";
 
-const miles = [
-  { title: "Развезти возвраты" },
-  { title: "Посчитать кратчайшие направления на участке" },
-  { title: "Спрогнозировать самые быстрые маршруты на будущий месяц" },
-];
-
-const highway = [
-  { title: "Найти оптимальные потоки" },
-  { title: "Перераспределить поток товаров с объекта" },
+const invoices = [
+  { title: "Расчёт рейсов с указанным уровнем маржи" },
+  { title: "Оптимальная загрузка полувагонов" },
+  { title: "Оптимальная загрузка платформ" },
 ];
 
 const parameters = [
-  { title: "Координаты" },
-  { title: "Количество выездов" },
-  { title: "Максимальная загрузка" },
-  { title: "Время работы склада" },
-  { title: "Приоритет" },
-  { title: "Максимальная продолжительность рейса" },
+  { title: "Число полувагонов 75т" },
+  { title: "Число полувагонов 69.5т" },
+  { title: "Фунтовая загрузка платформы" },
+  { title: "Допустимое кол-во вагоноотправок" },
+  { title: "Стоимость вагона" },
+];
+
+const util = [{ title: "Сократить траты на порожний тариф" }];
+
+const risks = [
+  { title: "В срок ли компания осуществляет погрузку?" },
+  { title: "Есть ли задолженности" },
 ];
 
 export const RobustBasics = () => {
@@ -27,18 +28,18 @@ export const RobustBasics = () => {
       <Card>
         <Flex gap={"4"} wrap={"wrap"}>
           <Badge size={"3"} color="sky">
-            Начните здесь
+            Полувагоны
           </Badge>
-          <Badge size={"3"} color="gray">
-            90% кейсов
+          <Badge size={"3"} color="sky">
+            Платформы
           </Badge>
         </Flex>
         <Box mt="4">
           <Text as="div" weight="bold">
-            Задачи оптимизации логистики
+            Повышение дохода с вагона
           </Text>
           <Text as="div" weight={"medium"} size={"2"} color="gray">
-            Маршрутизация точек доставки и отправления
+            Расчёт оптимальной загрузки и рейсов
           </Text>
         </Box>
 
@@ -47,7 +48,7 @@ export const RobustBasics = () => {
           <Text size={"1"} weight={"bold"}>
             детальная настройка пайплайна расчёта{" "}
             <Button radius="large" variant="surface" color="sky" size={"1"}>
-              все 50 параметров
+              все 26 параметров
             </Button>
           </Text>
         </Box>
@@ -69,11 +70,11 @@ export const RobustBasics = () => {
         <Flex mt="4" align={"center"} gap={"2"}>
           <ContainerIcon />
           <Text size={"1"} weight={"bold"}>
-            миля
+            брокер заявок
           </Text>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
-          {miles.map((mile) => {
+          {invoices.map((mile) => {
             return (
               <Card key={mile.title} asChild>
                 <Flex p={"1"} pt="0" pl="3" pr="3" width={"fit-content"}>
@@ -89,11 +90,11 @@ export const RobustBasics = () => {
         <Flex mt="4" align={"center"} gap={"2"}>
           <ContainerIcon />
           <Text size={"1"} weight={"bold"}>
-            магистраль
+            прогнозирование стоимости
           </Text>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
-          {highway.map((high) => {
+          {util.map((high) => {
             return (
               <Card key={high.title} asChild>
                 <Flex p={"1"} pt="0" pl="3" pr="3" width={"fit-content"}>
@@ -116,17 +117,33 @@ export const RobustBasics = () => {
             2. Выполнение расчёта занимает ~ 12 минут
           </Text>
         </Box>
-        <Box>
-          <Text weight={"medium"} size={"1"}>
-            3. Можно загрузить до 300 точек и 5 тыс. автомобилей
+        <Flex mt="8" gap={"4"} wrap={"wrap"}>
+          <Badge size={"3"} color="violet">
+            Закрытие рисков
+          </Badge>
+        </Flex>
+        <Flex mt="4" align={"center"} gap={"2"}>
+          <ContainerIcon />
+          <Text size={"1"} weight={"bold"}>
+            рейтинг грузовладельца
           </Text>
-        </Box>
-        <Box>
-          <Text weight={"medium"} size={"1"}>
-            4. Предусмотрен учёт трафика и топливной инфраструктуры дорожной
-            сети
-          </Text>
-        </Box>
+          <Badge color="gray" size={"1"}>
+            сводный рейтинг саплаеров
+          </Badge>
+        </Flex>
+        <Flex mt="2" gap={"2"} wrap={"wrap"}>
+          {risks.map((mile) => {
+            return (
+              <Card key={mile.title} asChild>
+                <Flex p={"1"} pt="0" pl="3" pr="3" width={"fit-content"}>
+                  <Text weight={"regular"} size={"1"}>
+                    {mile.title}
+                  </Text>
+                </Flex>
+              </Card>
+            );
+          })}
+        </Flex>
       </Card>
     </Box>
   );
