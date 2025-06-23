@@ -14,7 +14,10 @@ import { RobustAdvaced } from "./robust-advanced";
 export const ProductKeyPointsRobust = () => {
   return (
     <Section>
-      <Grid mt="4" columns={{ initial: "1fr", md: "1fr 1fr" }} gap={"6"}>
+      <Heading align={"center"} size={"4"} weight={"medium"}>
+        гибкость и масштабируемость
+      </Heading>
+      <Grid mt="6" columns={{ initial: "1fr", md: "1fr 1fr" }} gap={"6"}>
         <RobustBasics />
         <RobustAdvaced />
       </Grid>

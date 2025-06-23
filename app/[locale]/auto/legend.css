@@ -1,0 +1,38 @@
+.animation-container {
+    width: 320px;
+    height: 300px;
+    margin: auto;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.bar {
+    width: 250px;
+    border-radius: 4px 0px 0px 4px;
+    background-color: var(--gray-2);
+    height: 20px;
+}
+
+.surplus-bar {
+    width: 60px;
+    border-radius: 0px 4px 4px 0px;
+    background: linear-gradient(40deg, var(--sky-8) 20%, var(--violet-9) 90%);
+    height: 20px;
+}
+
+.plugin-icon {
+    position: static;
+    left: 12px;
+    top: 12px;
+}
+
+.farfetch {
+    font-weight: medium;
+    background: -webkit-linear-gradient(240deg, var(--violet-9) 10%, var(--pink-10) 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

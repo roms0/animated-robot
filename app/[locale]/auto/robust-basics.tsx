@@ -1,5 +1,5 @@
 import { Badge, Box, Button, Card, Flex, Text } from "@radix-ui/themes";
-import { ContainerIcon } from "./container";
+import { ContainerIcon } from "./icons/container";
 
 const miles = [
   { title: "Развезти возвраты" },
@@ -26,7 +26,7 @@ export const RobustBasics = () => {
     <Box>
       <Card>
         <Flex gap={"4"} wrap={"wrap"}>
-          <Badge size={"3"} color="sky">
+          <Badge size={"3"} color="gray">
             Начните здесь
           </Badge>
           <Badge size={"3"} color="gray">
@@ -34,43 +34,21 @@ export const RobustBasics = () => {
           </Badge>
         </Flex>
         <Box mt="4">
-          <Text as="div" weight="bold">
-            Задачи оптимизации логистики
+          <Text as="div" weight="bold" size={"2"}>
+            Оптимизация текущей логистики
           </Text>
           <Text as="div" weight={"medium"} size={"2"} color="gray">
             Маршрутизация точек доставки и отправления
           </Text>
         </Box>
 
-        {/* parameters */}
-        <Box mt="4">
-          <Text size={"1"} weight={"bold"}>
-            детальная настройка пайплайна расчёта{" "}
-            <Button radius="large" variant="surface" color="sky" size={"1"}>
-              все 50 параметров
-            </Button>
-          </Text>
-        </Box>
-        <Flex mt="2" gap={"2"} wrap={"wrap"}>
-          {parameters.map((parameter) => {
-            return (
-              <Card key={parameter.title} asChild>
-                <Flex p={"1"} pt="0" pl="3" pr="3" width={"fit-content"}>
-                  <Text weight={"medium"} size={"1"}>
-                    {parameter.title}
-                  </Text>
-                </Flex>
-              </Card>
-            );
-          })}
-        </Flex>
-
         {/* miles */}
-        <Flex mt="4" align={"center"} gap={"2"}>
+        <Flex wrap={"wrap"} mt="8" align={"center"} gap={"2"}>
           <ContainerIcon />
           <Text size={"1"} weight={"bold"}>
-            миля
+            задачи последней и первой мили
           </Text>
+          <Badge color="gray">маршрутизация</Badge>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
           {miles.map((mile) => {
@@ -86,11 +64,15 @@ export const RobustBasics = () => {
           })}
         </Flex>
         {/* highways */}
-        <Flex mt="4" align={"center"} gap={"2"}>
-          <ContainerIcon />
+        <Flex wrap={"wrap"} mt="8" align={"center"} gap={"2"}>
+          <Flex align={"center"} gap={"1"}>
+            <ContainerIcon />
+            <ContainerIcon />
+          </Flex>
           <Text size={"1"} weight={"bold"}>
-            магистраль
+            задачи магистрали
           </Text>
+          <Badge color="gray">управление потоком</Badge>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
           {highway.map((high) => {
@@ -106,6 +88,7 @@ export const RobustBasics = () => {
           })}
         </Flex>
 
+        {/* steps */}
         <Box mt="6">
           <Text size={"1"} weight={"medium"}>
             1. Расчёт требует csv файлов
@@ -127,6 +110,30 @@ export const RobustBasics = () => {
             сети
           </Text>
         </Box>
+
+        {/* parameters */}
+        <Box mt="8">
+          <Text size={"1"} weight={"bold"}>
+            <span style={{ color: "var(--sky-10)" }}>50 параметров</span> для
+            детальной настройки пайплайна{" "}
+          </Text>
+        </Box>
+        <Flex mt="2" gap={"2"} wrap={"wrap"}>
+          {parameters.map((parameter) => {
+            return (
+              <Card key={parameter.title} asChild>
+                <Flex p={"1"} pt="0" pl="3" pr="3" width={"fit-content"}>
+                  <Text weight={"medium"} size={"1"}>
+                    {parameter.title}
+                  </Text>
+                </Flex>
+              </Card>
+            );
+          })}
+          <Button radius="large" variant="soft" color="sky" size={"1"}>
+            посмотреть все в документации
+          </Button>
+        </Flex>
       </Card>
     </Box>
   );

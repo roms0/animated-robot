@@ -2,7 +2,7 @@
 
 import { Text } from "@radix-ui/themes";
 import "./card.css";
-import { ContainerIcon } from "../../container";
+import { ContainerIcon } from "../../icons/container";
 
 export const ProductCard = () => {
   return (

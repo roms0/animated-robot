@@ -1,5 +1,5 @@
 import { Badge, Box, Button, Card, Flex, Text } from "@radix-ui/themes";
-import { ContainerIcon } from "./container";
+import { ContainerIcon } from "./icons/container";
 
 const speeds = [
   { title: "Мотивационные политики" },
@@ -11,7 +11,10 @@ const cargo = [
   { title: "Крупногабаритные перевозки" },
 ];
 
-const clusters = [{ title: "Насколько эффективны зоны обслуживания складов?" }];
+const clusters = [
+  { title: "Насколько эффективны зоны обслуживания складов?" },
+  { title: "Какой размер флота будет оптимальным на следующий год?" },
+];
 
 const parameters = [
   { title: "Количество складов" },
@@ -30,7 +33,7 @@ export const RobustAdvaced = () => {
           </Badge>
         </Flex>
         <Box mt="4">
-          <Text as="div" weight="bold">
+          <Text as="div" weight="bold" size={"2"}>
             Задачи повышенной сложности
           </Text>
           <Text as="div" weight={"medium"} size={"2"} color="gray">
@@ -38,15 +41,17 @@ export const RobustAdvaced = () => {
           </Text>
         </Box>
 
-        {/* miles */}
-        <Flex mt="4" align={"center"} gap={"2"}>
-          <ContainerIcon />
+        {/* speeds */}
+        <Flex wrap={"wrap"} mt="8" align={"center"} gap={"2"}>
+          <Flex align={"center"} gap={"1"}>
+            <ContainerIcon />
+            <ContainerIcon />
+          </Flex>
           <Text size={"1"} weight={"bold"}>
-            нормативные скорости
+            задачи расчёта скоростных нормативов
           </Text>
-          <Badge color="gray" size={"1"}>
-            слой скоростей
-          </Badge>
+          <Badge color="gray">маршрутизация</Badge>
+          <Badge color="cyan">слой скоростей</Badge>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
           {speeds.map((mile) => {
@@ -61,12 +66,18 @@ export const RobustAdvaced = () => {
             );
           })}
         </Flex>
-        {/* highways */}
-        <Flex mt="4" align={"center"} gap={"2"}>
-          <ContainerIcon />
+
+        {/* cargo */}
+        <Flex wrap={"wrap"} mt="8" align={"center"} gap={"2"}>
+          <Flex align={"center"} gap={"1"}>
+            <ContainerIcon />
+            <ContainerIcon />
+            <ContainerIcon />
+          </Flex>
           <Text size={"1"} weight={"bold"}>
-            раскладка груза
+            задачи перемещения специальных грузов
           </Text>
+          <Badge color="gray">маршрутизация</Badge>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
           {cargo.map((high) => {
@@ -82,15 +93,18 @@ export const RobustAdvaced = () => {
           })}
         </Flex>
 
-        {/* parameters */}
-        <Flex mt="4" align={"center"} gap={"2"}>
-          <ContainerIcon />
+        {/* scaling */}
+        <Flex wrap={"wrap"} mt="8" align={"center"} gap={"2"}>
+          <Flex align={"center"} gap={"1"}>
+            <ContainerIcon />
+            <ContainerIcon />
+            <ContainerIcon />
+          </Flex>
           <Text size={"1"} weight={"bold"}>
-            кластеризация
+            задачи масштабирования
           </Text>
-          <Badge color="gray" size={"1"}>
-            новое разбиение объектов
-          </Badge>
+          <Badge color="gray">маршрутизация</Badge>
+          <Badge color="cyan">новая топология</Badge>
         </Flex>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
           {clusters.map((parameter) => {
@@ -106,19 +120,10 @@ export const RobustAdvaced = () => {
           })}
         </Flex>
 
-        <Box mt="6">
-          <Text size={"1"} weight={"medium"}>
-            1. Базовый пайплайн работает с дополнительными параметрами
-          </Text>
-        </Box>
-
         {/* parameters */}
-        <Box mt="4">
+        <Box mt="8">
           <Text size={"1"} weight={"bold"}>
-            дополнительные параметры{" "}
-            <Button radius="large" variant="surface" color="sky" size={"1"}>
-              все 10 параметров
-            </Button>
+            Запуск с дополнительными настройками{" "}
           </Text>
         </Box>
         <Flex mt="2" gap={"2"} wrap={"wrap"}>
@@ -133,6 +138,9 @@ export const RobustAdvaced = () => {
               </Card>
             );
           })}
+          <Button radius="large" variant="soft" color="sky" size={"1"}>
+            к документации
+          </Button>
         </Flex>
       </Card>
     </Box>
