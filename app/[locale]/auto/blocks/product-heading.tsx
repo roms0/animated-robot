@@ -15,7 +15,7 @@ export const ProductHeading = () => {
         </Box>
       </Flex>
       <Flex mt="9" justify={"center"}>
-        <Button variant="soft">
+        <Button variant="soft" color="violet">
           <CopyIcon /> info@smartmachines.pro
         </Button>
       </Flex>

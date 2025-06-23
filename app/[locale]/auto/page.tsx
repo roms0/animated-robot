@@ -1,31 +1,16 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  IconButton,
-  Section,
-  Text,
-} from "@radix-ui/themes";
-import { useTranslations } from "next-intl";
-import { CopyIcon } from "@radix-ui/react-icons";
-import "./page.css";
-import { ContainerIcon } from "./icons/container";
-import { ProductHeading } from "./product-heading";
-import { ProductKeyPointsRobust } from "./product-keypoints-robust";
-import { ProductLegend } from "./legend";
-import { ProductFeatured } from "./product-featured";
+import { ProductHeading } from "./blocks/product-heading";
+import { ProductKeyPointsRobust } from "./blocks/product-table/product-keypoints-robust";
+import { ProductCatch } from "./blocks/product-catch/product-catch";
+import { ProductFeatured } from "./blocks/collab/product-featured";
+import { ProductUsecase } from "./blocks/product-usecase/product-usecase";
 
 export default function Home() {
-  const main = useTranslations("main");
-
   return (
     <>
       <ProductHeading />
-      <ProductLegend />
+      <ProductCatch />
       <ProductFeatured />
-      <ProductKeyPointsRobust />
+      <ProductUsecase />
     </>
   );
 }

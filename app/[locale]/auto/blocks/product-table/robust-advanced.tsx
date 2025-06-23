@@ -1,5 +1,5 @@
 import { Badge, Box, Button, Card, Flex, Text } from "@radix-ui/themes";
-import { ContainerIcon } from "./icons/container";
+import { ContainerIcon } from "../../icons/container";
 
 const speeds = [
   { title: "Мотивационные политики" },
