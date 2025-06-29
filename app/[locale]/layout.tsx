@@ -34,7 +34,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider>
           <ThemeProvider attribute={"class"}>
-            <Theme hasBackground={false}>
+            <Theme accentColor="sky" hasBackground={false}>
               <Container
                 position={"relative"}
                 overflowX={"hidden"}

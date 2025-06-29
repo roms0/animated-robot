@@ -3,10 +3,42 @@
 }
 
 .farfetch {
-    background: -webkit-linear-gradient(240deg, var(--violet-9) 10%, var(--pink-10) 90%);
+    background: -webkit-linear-gradient(240deg, var(--pink-10) 5%, var(--violet-10) 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.elevated-card {
+    padding: var(--space-3);
+    border-radius: var(--radius-4);
+    background-color: var(--color-panel);
+    box-shadow: 0 0px 12px 0px var(--black-a1)
+}
+
+.parameter-box {
+    border-radius: var(--radius-2);
+    background-color: var(--mauve-1);
+    padding-left: var(--space-1);
+    padding-right: var(--space-1);
+    border: 1px solid var(--mauve-6);
+    font-size: var(--font-size-1);
+    color: var(--mauve-12);
+}
+
+.description-box {
+    border-radius: var(--radius-2);
+    background-color: var(--mauve-1);
+    padding: var(--space-1);
+    border: 1px solid var(--mauve-4);
+    font-size: var(--font-size-1);
+    color: var(--mauve-12);
+}
+
+.magic-accent {
+    box-shadow: 0 0px 12px 0px var(--black-a1);
+    border-radius: var(--radius-5);
+    padding: var(--space-1)  var(--space-2);
 }
 
 .major-effect {
