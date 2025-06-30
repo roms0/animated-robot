@@ -9,25 +9,19 @@ export const ProductFeatured = () => {
     gsap.from(".featured", { opacity: 0, y: 100, delay: 1 });
   });
   return (
-    <Flex
-      mt="10vh"
-      wrap={"wrap"}
-      justify={"center"}
-      gap="10vw"
-      align={"center"}
-    >
+    <Flex mt="9" wrap={"wrap"} justify={"center"} gap="5" align={"center"}>
       <Box>
-        <Heading className="featured" weight={"bold"} size="4">
+        <Heading className="featured" weight={"medium"} size="4">
           vk cloud
         </Heading>
       </Box>
       <Box>
-        <Heading className="featured" weight={"bold"} size="4">
+        <Heading className="featured" weight={"medium"} size="4">
           complitech
         </Heading>
       </Box>
       <Box>
-        <Heading className="featured" weight={"bold"} size="4">
+        <Heading className="featured" weight={"medium"} size="4">
           м-групп
         </Heading>
       </Box>

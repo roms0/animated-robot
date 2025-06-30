@@ -14,7 +14,13 @@ export const ProductHeading = () => {
         m="auto"
       >
         <Box maxWidth={"400px"}>
-          <Heading align={"center"} size={"1"} weight={"medium"} color="gray">
+          <Heading
+            align={"center"}
+            mb="2"
+            size={"1"}
+            weight={"medium"}
+            color="gray"
+          >
             Путь.Про авто
           </Heading>
           <Heading align={"center"} size={"8"}>
@@ -31,7 +37,7 @@ export const ProductHeading = () => {
             самое оптимальное решение.
           </Heading>
         </Box>
-        <Button className="actions" variant="ghost" color="gray">
+        <Button className="actions">
           <CopyIcon /> info@smartmachines.pro
         </Button>
       </Flex>

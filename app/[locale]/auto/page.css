@@ -3,7 +3,7 @@
 }
 
 .farfetch {
-    background: -webkit-linear-gradient(240deg, var(--pink-10) 5%, var(--violet-10) 90%);
+    background: -webkit-linear-gradient(240deg, var(--teal-10) -10%, var(--blue-10) 110%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

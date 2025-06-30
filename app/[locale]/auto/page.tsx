@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <ProductHeading />
-      <ProductTable />
       <ProductFeatured />
+      <ProductTable />
       <ProductParams />
     </>
   );
