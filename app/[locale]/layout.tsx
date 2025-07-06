@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navigation } from "../components/navigation";
+import { DesktopNavigation, MobileNavigation } from "../components/navigation";
 import { Container, Reset, Text, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from "next/font/google";
@@ -35,16 +35,9 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <ThemeProvider attribute={"class"}>
             <Theme accentColor="sky" hasBackground={false}>
-              <Container
-                position={"relative"}
-                overflowX={"hidden"}
-                pl="6"
-                pr="6"
-                size={"4"}
-              >
-                <Navigation />
-                <Reset>{children}</Reset>
-              </Container>
+              <DesktopNavigation />
+              <Reset>{children}</Reset>
+              <MobileNavigation />
             </Theme>
           </ThemeProvider>
         </NextIntlClientProvider>

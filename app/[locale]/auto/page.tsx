@@ -3,14 +3,34 @@ import { ProductFeatured } from "./blocks/collab/product-featured";
 import "./page.css";
 import { ProductTable } from "./blocks/product-table/product-table";
 import { ProductParams } from "./blocks/product-params";
+import {
+  Box,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Section,
+  SegmentedControl,
+  Text,
+} from "@radix-ui/themes";
+import { ToggleGroup } from "radix-ui";
+import { ProductServiceGroups } from "./blocks/product-service-groups";
+import { Domains } from "./blocks/domains";
+import { Miles } from "./blocks/miles";
+import { High } from "./blocks/high";
+import { Zones } from "./blocks/zones";
 
 export default function Home() {
   return (
     <>
-      <ProductHeading />
-      <ProductFeatured />
-      <ProductTable />
-      <ProductParams />
+      <Container size={"4"} p="4">
+        <ProductHeading />
+        <ProductFeatured />
+        <Miles />
+        <High />
+        <Zones />
+      </Container>
+      <Section></Section>
     </>
   );
 }

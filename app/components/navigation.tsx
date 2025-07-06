@@ -5,14 +5,29 @@ import { DesktopMenu } from "./desktop-menu";
 import { Container } from "@radix-ui/themes";
 import { MobileMenu } from "./mobile-menu";
 
-export const Navigation = () => {
+export const DesktopNavigation = () => {
   return (
     <>
       <Container display={{ initial: "none", md: "initial" }}>
         <DesktopMenu />
       </Container>
-      <Container display={{ initial: "initial", md: "none" }} mt="3">
-        {/* <DesktopMenu /> */}
+    </>
+  );
+};
+
+export const MobileNavigation = () => {
+  return (
+    <>
+      <Container
+        style={{
+          position: "sticky",
+          bottom: "0px",
+          backgroundColor: "var(--color-panel-solid)",
+        }}
+        display={{ initial: "initial", md: "none" }}
+        p="5"
+      >
+        <MobileMenu />
       </Container>
     </>
   );

@@ -6,12 +6,16 @@
   margin: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 :root {
     --custom-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.06);
 }
 
 .radix-themes {
-  --default-font-family: var(--font-golos);
+    --default-font-family: var(--font-golos);
 }
 
 .smartmachines-copy-button {

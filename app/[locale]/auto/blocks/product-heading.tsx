@@ -1,16 +1,16 @@
 import { CopyIcon } from "@radix-ui/react-icons";
-import { Box, Button, Flex, Heading, Section } from "@radix-ui/themes";
+import { Box, Button, Flex, Grid, Heading, Section } from "@radix-ui/themes";
 import { Magic } from "../icons/magic";
 
 export const ProductHeading = () => {
   return (
-    <Section pt={"15vh"}>
+    <Section pt={{ initial: "10vh", md: "15vh" }}>
       <Flex
         wrap={"wrap"}
         direction={"column"}
         justify={"center"}
         align={"center"}
-        gap={"6"}
+        gap={"4"}
         m="auto"
       >
         <Box maxWidth={"400px"}>
@@ -23,23 +23,41 @@ export const ProductHeading = () => {
           >
             Путь.Про авто
           </Heading>
-          <Heading align={"center"} size={"8"}>
-            <span className="magic-accent">
-              ml <Magic size={22} />
-            </span>{" "}
-            сервисы для задач <span className="farfetch">дорожной сети</span>
+          <Heading align={"center"} size={"6"}>
+            {/* <span className="magic-accent">
+              ml <Magic size={16} />
+            </span>{" "} */}
+            оптимизация <span className="farfetch">автомобильной</span>{" "}
+            логистики
           </Heading>
         </Box>
-        <Box maxWidth={"500px"}>
-          <Heading align={"center"} size={"2"} weight={"light"} color="gray">
-            Решайте сложные задачи логистики быстро и точно. Опишите свои
-            данные, установите параметры и допустимые ограничения, а мы подберем
-            самое оптимальное решение.
+        <Box maxWidth={"400px"}>
+          <Heading align={"center"} size={"1"} weight={"light"} color="gray">
+            Опишите параметры и допустимые ограничения, мы подберем самое
+            оптимальное решение.
           </Heading>
         </Box>
-        <Button className="actions">
+        <Button variant="surface" color="cyan" className="actions">
           <CopyIcon /> info@smartmachines.pro
         </Button>
+      </Flex>
+      <Flex mt="9" gap={"4"} justify={"center"}>
+        <Box>
+          <Heading align={"center"} weight={"medium"}>
+            30+
+          </Heading>
+          <Heading align={"center"} weight={"light"} size={"1"}>
+            параметров
+          </Heading>
+        </Box>
+        <Box>
+          <Heading align={"center"} weight={"medium"}>
+            12~
+          </Heading>
+          <Heading align={"center"} weight={"light"} size={"1"}>
+            секунд на решение
+          </Heading>
+        </Box>
       </Flex>
     </Section>
   );
