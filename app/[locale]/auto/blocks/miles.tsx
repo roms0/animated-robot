@@ -2,8 +2,6 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import {
   Badge,
   Box,
-  Button,
-  Container,
   Flex,
   Grid,
   Heading,
@@ -16,37 +14,40 @@ export const Miles = () => {
     <Section>
       <Flex align={"center"} direction={"column"} gap={"2"}>
         <Box>
-          <Heading size={"2"} weight={"bold"}>
-            последняя миля & первая миля
-          </Heading>
+          <Heading weight={"bold"}>Последняя миля и Первая миля</Heading>
         </Box>
         <Box>
-          <Heading size={"1"} weight={"regular"} color="gray">
+          <Text align={"center"} weight={"regular"} color="gray">
             аналитика и создание маршрутизации между точками
             доставки/отправления и складами.
-          </Heading>
+          </Text>
         </Box>
       </Flex>
-      <Grid mt="6" columns={{ initial: "1", md: "2" }} gap={"4"}>
+      <Grid mt="8" columns={{ initial: "1", md: "2" }} gap={"4"}>
         <Box className="elevated-card">
-          <Heading align={"center"} size={"2"} weight={"medium"}>
-            параметры и ограничения
+          <Heading align={"center"} size={"3"} weight={"medium"}>
+            Параметры и ограничения
           </Heading>
           <Box mt="4">
             <Flex direction={"column"} gap={"2"}>
               <Box className="description-box" p="4">
                 <Heading size={"1"} weight={"medium"}>
-                  критерий оптимизации: скорость, стоимость, расстояние
+                  Критерий оптимизации: скорость, стоимость, расстояние
                 </Heading>
               </Box>
               <Box className="description-box" p="4">
                 <Heading size={"1"} weight={"medium"}>
-                  до 20 параметров объектов
+                  Настроки последней мили
                 </Heading>
+                <Flex mt="2" gap="2" wrap={"wrap"}>
+                  <Box className="parameter-box">Время погрузки</Box>
+                  <Box className="parameter-box">Длительность смены</Box>
+                  <Box className="parameter-box">Кол-во точек в маршруте</Box>
+                </Flex>
               </Box>
               <Box className="description-box" p="4">
                 <Heading size={"1"} weight={"medium"}>
-                  5 параметров особенного груза <Badge>Про</Badge>
+                  Особенный груз <Badge>Про</Badge>
                 </Heading>
                 <Box mt="2">
                   <Text size={"1"}>
@@ -59,8 +60,8 @@ export const Miles = () => {
           </Box>
         </Box>
         <Box className="elevated-card">
-          <Heading align={"center"} size={"2"} weight={"medium"}>
-            результат
+          <Heading align={"center"} size={"3"} weight={"medium"}>
+            Результат
           </Heading>
           <Box mt="4">
             <Flex direction={"column"} gap={"2"}>
@@ -76,6 +77,13 @@ export const Miles = () => {
                   </Text>
                 </Box>
               </Box>
+            </Flex>
+          </Box>
+          <Heading mt="6" align={"center"} size={"3"} weight={"medium"}>
+            Дополнительные сведения
+          </Heading>
+          <Box mt="4">
+            <Flex direction={"column"} gap={"2"}>
               <Box className="description-box" p="4">
                 <Heading size={"1"} weight={"medium"}>
                   Учёт дозаявки <Badge>Про</Badge>

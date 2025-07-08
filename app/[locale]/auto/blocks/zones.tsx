@@ -16,21 +16,19 @@ export const Zones = () => {
     <Section>
       <Flex align={"center"} direction={"column"} gap={"2"}>
         <Box>
-          <Heading size={"2"} weight={"bold"}>
-            зонирование
-          </Heading>
+          <Heading weight={"bold"}>Зонирование</Heading>
         </Box>
         <Box>
-          <Heading size={"1"} weight={"regular"} color="gray">
+          <Text align={"center"} weight={"regular"} color="gray">
             создание эффективных зон обслуживания склада в зависимости от его
             параметров
-          </Heading>
+          </Text>
         </Box>
       </Flex>
-      <Grid mt="6" columns={{ initial: "1", md: "2" }} gap={"4"}>
+      <Grid mt="8" columns={{ initial: "1", md: "2" }} gap={"4"}>
         <Box className="elevated-card">
-          <Heading align={"center"} size={"2"} weight={"medium"}>
-            параметры и ограничения
+          <Heading align={"center"} size={"3"} weight={"medium"}>
+            Параметры и ограничения
           </Heading>
           <Box mt="4">
             <Flex direction={"column"} gap={"2"}>
@@ -43,8 +41,8 @@ export const Zones = () => {
           </Box>
         </Box>
         <Box className="elevated-card">
-          <Heading align={"center"} size={"2"} weight={"medium"}>
-            результат
+          <Heading align={"center"} size={"3"} weight={"medium"}>
+            Результат
           </Heading>
           <Box mt="4">
             <Flex direction={"column"} gap={"2"}>

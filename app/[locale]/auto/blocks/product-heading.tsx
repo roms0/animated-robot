@@ -1,5 +1,13 @@
 import { CopyIcon } from "@radix-ui/react-icons";
-import { Box, Button, Flex, Grid, Heading, Section } from "@radix-ui/themes";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Section,
+  Text,
+} from "@radix-ui/themes";
 import { Magic } from "../icons/magic";
 
 export const ProductHeading = () => {
@@ -13,7 +21,7 @@ export const ProductHeading = () => {
         gap={"4"}
         m="auto"
       >
-        <Box maxWidth={"400px"}>
+        <Box maxWidth={"600px"}>
           <Heading
             align={"center"}
             mb="2"
@@ -23,7 +31,7 @@ export const ProductHeading = () => {
           >
             Путь.Про авто
           </Heading>
-          <Heading align={"center"} size={"6"}>
+          <Heading align={"center"} size={"8"}>
             {/* <span className="magic-accent">
               ml <Magic size={16} />
             </span>{" "} */}
@@ -32,10 +40,10 @@ export const ProductHeading = () => {
           </Heading>
         </Box>
         <Box maxWidth={"400px"}>
-          <Heading align={"center"} size={"1"} weight={"light"} color="gray">
+          <Text align={"center"} weight={"light"} color="gray">
             Опишите параметры и допустимые ограничения, мы подберем самое
             оптимальное решение.
-          </Heading>
+          </Text>
         </Box>
         <Button variant="surface" color="cyan" className="actions">
           <CopyIcon /> info@smartmachines.pro
