@@ -12,7 +12,7 @@ import { Magic } from "../icons/magic";
 
 export const ProductHeading = () => {
   return (
-    <Section pt={{ initial: "10vh", md: "15vh" }}>
+    <Section id="index" pt={{ initial: "10vh", md: "15vh" }}>
       <Flex
         wrap={"wrap"}
         direction={"column"}
