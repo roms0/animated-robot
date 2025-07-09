@@ -19,6 +19,7 @@ import { Domains } from "./blocks/domains";
 import { Miles } from "./blocks/miles";
 import { High } from "./blocks/high";
 import { Zones } from "./blocks/zones";
+import React from "react";
 
 export default function Home() {
   return (
@@ -30,7 +31,6 @@ export default function Home() {
         <High />
         <Zones />
       </Container>
-      <Section></Section>
     </>
   );
 }

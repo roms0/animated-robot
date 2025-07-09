@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Heading, Section, Text } from "@radix-ui/themes";
-import { useTranslations } from "next-intl";
 import "./page.css";
 import { ShineHeading } from "../components/shine-heading/shine-heading";
 import { CopyIcon } from "@radix-ui/react-icons";
@@ -8,8 +7,6 @@ import { Advantages } from "../components/advantages/advantages";
 import { Usage } from "../components/usage/usage";
 
 export default function Home() {
-  const main = useTranslations("main");
-
   return (
     <>
       {/* WE ARE AND CTA */}

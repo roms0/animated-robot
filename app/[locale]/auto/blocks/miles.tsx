@@ -11,7 +11,7 @@ import {
 
 export const Miles = () => {
   return (
-    <Section>
+    <Section mt="20vh">
       <Flex align={"center"} direction={"column"} gap={"2"}>
         <Box>
           <Heading weight={"bold"}>Последняя миля и Первая миля</Heading>

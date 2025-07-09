@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { DesktopNavigation, MobileNavigation } from "../components/navigation";
-import { Container, Reset, Text, Theme } from "@radix-ui/themes";
+import { DesktopNavigation } from "../components/navigation";
+import { Reset, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from "next/font/google";
 import { ThemeProvider } from "next-themes";
+import { MobileMenu } from "../components/mobile-menu/mobile-menu";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],
@@ -37,7 +38,7 @@ export default async function RootLayout({
             <Theme accentColor="sky" hasBackground={false}>
               <DesktopNavigation />
               <Reset>{children}</Reset>
-              <MobileNavigation />
+              <MobileMenu />
             </Theme>
           </ThemeProvider>
         </NextIntlClientProvider>

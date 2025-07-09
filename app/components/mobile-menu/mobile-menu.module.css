@@ -1,0 +1,22 @@
+.menu {
+    position: sticky;
+    bottom: 0px;
+    height: 38vh;
+    width: 100vw;
+    transform: translateY(30vh);
+    background-color: var(--color-panel-solid);
+    box-shadow: var(--custom-shadow);
+    border-radius: var(--radius-4) var(--radius-4) 0 0;
+    transition: transform 0.4s ease; 
+}
+
+.menu-seen {
+    transform: translateY(0vh);
+}
+
+.link {
+    all: unset;
+	outline: none;
+	text-decoration: none;
+	user-select: none;
+}

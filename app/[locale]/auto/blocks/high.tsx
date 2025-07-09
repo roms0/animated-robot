@@ -13,7 +13,7 @@ import {
 
 export const High = () => {
   return (
-    <Section>
+    <Section mt="15vh" id="high">
       <Flex align={"center"} direction={"column"} gap={"2"}>
         <Box>
           <Heading weight={"bold"}>Магистраль</Heading>
