@@ -7,13 +7,21 @@ import {
   Section,
   Text,
 } from "@radix-ui/themes";
-import { ShineHeading } from "../components/shine-heading/shine-heading";
 import { CopyIcon } from "@radix-ui/react-icons";
+import { ProductFeatured } from "../components/product-featured";
 
 export default function Home() {
   return (
-    <Container pt="20vh">
-      <Heading align={"center"}>⚡ Путь.Про</Heading>
+    <Container size={"4"} p="4">
+      <Section pt="15vh">
+        <Heading align={"center"}>⚡ Путь.Про</Heading>
+      </Section>
+      <Section pt="15vh">
+        <Heading size={"2"} align={"center"} weight={"medium"} color="gray">
+          Решайте задачи мультимодальной логистики с нашими продуктами
+        </Heading>
+      </Section>
+      <ProductFeatured />
     </Container>
   );
 }

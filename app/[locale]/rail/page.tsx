@@ -1,9 +1,9 @@
 import { Container } from "@radix-ui/themes";
 import { Head } from "./alternative/head";
 import { ProductFeatured } from "./alternative/product-featured";
-import { Mile } from "./alternative/mile";
-import { High } from "./alternative/high";
-import { Store } from "./alternative/store";
+import { Invoice } from "./alternative/invoice";
+import { Scheme } from "./alternative/scheme";
+import { Insights } from "./alternative/insights";
 
 export default function Railroads() {
   return (
@@ -11,9 +11,9 @@ export default function Railroads() {
       <Container size={"4"} p="4">
         <Head />
         <ProductFeatured />
-        <Mile />
-        <High />
-        <Store />
+        <Invoice />
+        <Scheme />
+        <Insights />
       </Container>
     </>
   );

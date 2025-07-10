@@ -1,11 +1,11 @@
 "use client";
 
-import { Flex, Link, Text } from "@radix-ui/themes";
+import { Container, Flex, Link, Text } from "@radix-ui/themes";
 import * as React from "react";
 
 export const DesktopMenu = () => {
   return (
-    <>
+    <Container display={{ initial: "none", md: "initial" }}>
       <Flex
         align={"center"}
         gap={{ initial: "2", md: "9" }}
@@ -45,6 +45,6 @@ export const DesktopMenu = () => {
           </Link>
         </Flex>
       </Flex>
-    </>
+    </Container>
   );
 };

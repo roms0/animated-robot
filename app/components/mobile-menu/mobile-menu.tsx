@@ -83,13 +83,7 @@ export const MobileMenu = () => {
         className={`${classes.menu} ${isOpen && classes["menu-seen"]}`}
         display={{ initial: "block", md: "none" }}
       >
-        <Flex
-          onClick={toggle}
-          align={"center"}
-          gap={"4"}
-          justify={"between"}
-          p="4"
-        >
+        <Flex onClick={toggle} align={"center"} justify={"between"} p="4">
           <Box>
             <BreadCrumbs chunks={path.split("/")} />
           </Box>
@@ -100,10 +94,10 @@ export const MobileMenu = () => {
           </Box>
           <ChevronUpIcon className={classes.indicator} width={18} height={18} />
         </Flex>
-        <Grid columns={"2"} p="4">
+        <Grid columns={"2"} pl="4">
           <Box>
             <HashLink href="/auto#index">авто</HashLink>
-            <Flex direction={"column"} mt="4">
+            <Flex pl="3" gap="1" direction={"column"}>
               <HashLink href="/auto#mile">миля</HashLink>
               <HashLink href="/auto#high">магистраль</HashLink>
               <HashLink href="/auto#store">склад</HashLink>
@@ -111,6 +105,11 @@ export const MobileMenu = () => {
           </Box>
           <Box>
             <HashLink href="/rail#index">жд</HashLink>
+            <Flex pl="3" gap="1" direction={"column"}>
+              <HashLink href="/rail#invoice">заявки</HashLink>
+              <HashLink href="/rail#scheme">вагоны</HashLink>
+              <HashLink href="/rail#insights">аналитика</HashLink>
+            </Flex>
           </Box>
         </Grid>
       </Box>
