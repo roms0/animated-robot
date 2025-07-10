@@ -43,9 +43,6 @@ export const DesktopMenu = () => {
           >
             железные дороги
           </Link>
-          <Text size={"2"} color="gray" weight={"light"}>
-            курьер
-          </Text>
         </Flex>
       </Flex>
     </>

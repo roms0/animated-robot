@@ -1,35 +1,20 @@
-import { ProductHeading } from "./blocks/product-heading";
 import { ProductFeatured } from "./blocks/collab/product-featured";
-import "./page.css";
-import { ProductTable } from "./blocks/product-table/product-table";
-import { ProductParams } from "./blocks/product-params";
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  Section,
-  SegmentedControl,
-  Text,
-} from "@radix-ui/themes";
-import { ToggleGroup } from "radix-ui";
-import { ProductServiceGroups } from "./blocks/product-service-groups";
-import { Domains } from "./blocks/domains";
-import { Miles } from "./blocks/miles";
-import { High } from "./blocks/high";
-import { Zones } from "./blocks/zones";
-import React, { useEffect } from "react";
+import { Container } from "@radix-ui/themes";
+import React from "react";
+import { Head } from "./alternative/head";
+import { Mile } from "./alternative/mile";
+import { High } from "./alternative/high";
+import { Store } from "./alternative/store";
 
 export default function Home() {
   return (
     <>
       <Container size={"4"} p="4">
-        <ProductHeading />
+        <Head />
         <ProductFeatured />
-        <Miles />
+        <Mile />
         <High />
-        <Zones />
+        <Store />
       </Container>
     </>
   );

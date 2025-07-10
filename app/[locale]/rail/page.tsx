@@ -1,12 +1,20 @@
-import "./page.css";
-import { ProductHeading } from "./product-heading";
-import { ProductKeyPointsRobust } from "./product-keypoints-robust";
+import { Container } from "@radix-ui/themes";
+import { Head } from "./alternative/head";
+import { ProductFeatured } from "./alternative/product-featured";
+import { Mile } from "./alternative/mile";
+import { High } from "./alternative/high";
+import { Store } from "./alternative/store";
 
 export default function Railroads() {
   return (
     <>
-      <ProductHeading />
-      <ProductKeyPointsRobust />
+      <Container size={"4"} p="4">
+        <Head />
+        <ProductFeatured />
+        <Mile />
+        <High />
+        <Store />
+      </Container>
     </>
   );
 }
