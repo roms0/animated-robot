@@ -16,7 +16,7 @@ export const Store = () => {
       <Flex mt="4" wrap={"wrap"} gap={"4"}>
         <FeatureCard
           title="Оптимальное зонирование"
-          description="Зоны доставки для ваших складов"
+          description="Сбалансированные зоны доставки для оптимизации работы склада"
           pro
         />
       </Flex>

@@ -1,10 +1,9 @@
-import { ProductFeatured } from "./blocks/collab/product-featured";
 import { Container } from "@radix-ui/themes";
 import React from "react";
 import { Head } from "./alternative/head";
-import { Mile } from "./alternative/mile";
-import { High } from "./alternative/high";
-import { Store } from "./alternative/store";
+import { ProductFeatured } from "@/app/components/product-featured";
+import "./page.css";
+import { Presentation } from "./presentation";
 
 export default function Home() {
   return (
@@ -12,9 +11,7 @@ export default function Home() {
       <Container size={"4"} p="4">
         <Head />
         <ProductFeatured />
-        <Mile />
-        <High />
-        <Store />
+        <Presentation />
       </Container>
     </>
   );

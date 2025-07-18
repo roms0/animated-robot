@@ -15,10 +15,10 @@ export const Head = () => {
     <Section id="index" pt="15vh">
       <Box maxWidth={"500px"} m="auto">
         <Heading align={"center"}>
-          ⚡ ml оптимизация контура автомобильной логистики
+          ml оптимизация контура автомобильной логистики
         </Heading>
         <Heading align={"center"} size={"2"} weight={"medium"} mt="6">
-          достигайте лучших результатов при решении задач <Badge>первой</Badge>{" "}
+          Достигайте лучших результатов при решении задач <Badge>первой</Badge>{" "}
           и <Badge>последней мили</Badge>, <Badge>магистрали</Badge> и{" "}
           <Badge>зонирования</Badge> складов
         </Heading>
@@ -29,8 +29,8 @@ export const Head = () => {
           mt="6"
           color="gray"
         >
-          1. Загрузите параметры и ограничения 2. Получите результат через{" "}
-          <Badge color="red">1 минуту</Badge>
+          1. Загрузите точки доставки 2. Установите параметры 3. Получите
+          результат через <Badge color="red">1 минуту</Badge>
         </Heading>
       </Box>
     </Section>

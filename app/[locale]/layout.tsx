@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { MobileMenu } from "../components/mobile-menu/mobile-menu";
-import { DesktopMenu } from "../components/desktop-menu/desktop-menu";
+import { DesktopMenu } from "../components/desktop-menu/desktop-menu-fresh";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],
@@ -14,7 +14,7 @@ const golos = Golos_Text({
 });
 
 export const metadata: Metadata = {
-  title: "machines",
+  title: "smart machines",
   description: "smart machines products page",
 };
 
@@ -35,7 +35,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider>
           <ThemeProvider attribute={"class"}>
-            <Theme accentColor="sky" hasBackground={false}>
+            <Theme accentColor="cyan" hasBackground={false}>
               <DesktopMenu />
               <Reset>{children}</Reset>
               <MobileMenu />

@@ -3,10 +3,11 @@
 }
 
 .farfetch {
-    background: -webkit-linear-gradient(240deg, var(--cyan-10) -10%, var(--blue-10) 110%);
+    background: -webkit-linear-gradient(20deg, var(--purple-10) -40%, var(--sky-11) 120%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .elevated-card {

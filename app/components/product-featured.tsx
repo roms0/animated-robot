@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Section } from "@radix-ui/themes";
+import Image from "next/image";
 
 export const ProductFeatured = () => {
   return (
@@ -10,9 +11,12 @@ export const ProductFeatured = () => {
           </Heading>
         </Box>
         <Box>
-          <Heading className="featured" weight={"medium"} size="2">
-            vk cloud
-          </Heading>
+          <Flex align={"center"} gap={"2"}>
+            <Image width={25} height={25} alt="cloud" src={"/cloud.png"} />
+            <Heading className="featured" weight={"medium"} size="2">
+              vk cloud
+            </Heading>
+          </Flex>
         </Box>
         <Box>
           <Heading className="featured" weight={"medium"} size="2">

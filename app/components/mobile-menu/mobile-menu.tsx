@@ -5,17 +5,14 @@ import classes from "./mobile-menu.module.css";
 import React from "react";
 import { usePathname } from "@/i18n/navigation";
 import { useMenuStore } from "@/app/components/store/menu";
-import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
 import { ChevronUpIcon } from "@radix-ui/react-icons";
+import { HashLink } from "../hash-link/hash-link";
 
 const parsing = {
   "": { title: "Путь.Про", path: "/", color: "gray" },
   auto: { title: "авто", path: "/auto#index", color: "plum" },
   rail: { title: "жд", path: "/rail#index", color: "pink" },
 } as const;
-
-const emj = "🚛🪨📦🛢️";
 
 const BreadCrumbs = ({ chunks }: { chunks: string[] }) => {
   return (
@@ -34,45 +31,6 @@ const BreadCrumbs = ({ chunks }: { chunks: string[] }) => {
     </>
   );
 };
-
-function HashLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
-  const router = useRouter();
-  const locale = useLocale();
-
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-
-    const [path, hash] = href.split("#");
-    const fullPath = `/${locale}${path.startsWith("/") ? "" : "/"}${path}`;
-    router.push(fullPath, { scroll: false });
-
-    setTimeout(() => {
-      if (hash) {
-        history.replaceState(null, "", `#${hash}`);
-        const el = document.getElementById(hash);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    }, 500);
-  };
-
-  return (
-    <a
-      className={classes.link}
-      href={`/${locale}${href}`}
-      onClick={handleClick}
-    >
-      {children}
-    </a>
-  );
-}
 
 export const MobileMenu = () => {
   const { isOpen, toggle } = useMenuStore();
@@ -96,7 +54,7 @@ export const MobileMenu = () => {
         </Flex>
         <Grid columns={"2"} pl="4">
           <Box>
-            <HashLink href="/auto#index">авто</HashLink>
+            <HashLink href="/auto#index">автомобильная логистика</HashLink>
             <Flex pl="3" gap="1" direction={"column"}>
               <HashLink href="/auto#mile">миля</HashLink>
               <HashLink href="/auto#high">магистраль</HashLink>
@@ -104,7 +62,7 @@ export const MobileMenu = () => {
             </Flex>
           </Box>
           <Box>
-            <HashLink href="/rail#index">жд</HashLink>
+            <HashLink href="/rail#index">железнодорожная логистика</HashLink>
             <Flex pl="3" gap="1" direction={"column"}>
               <HashLink href="/rail#invoice">заявки</HashLink>
               <HashLink href="/rail#scheme">вагоны</HashLink>

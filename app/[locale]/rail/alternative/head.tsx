@@ -15,12 +15,12 @@ export const Head = () => {
     <Section id="index" pt="15vh">
       <Box maxWidth={"500px"} m="auto">
         <Heading align={"center"}>
-          ⚡ ml оптимизация затрат оператора парка вагонов
+          ml оптимизация железнодорожной логистики оператора
         </Heading>
         <Heading align={"center"} size={"2"} weight={"medium"} mt="6">
-          отбирайте <Badge color="pink">лучшие заявки</Badge> от
-          <Badge color="pink">грузовладельцев</Badge>, подключайте интеграции
-          для своевременной <Badge color="pink">заадресовки вагона</Badge>
+          Эффективные логистические схемы перевозок: сценарный
+          <Badge color="pink">анализ платного отстоя</Badge> на цикличном рынке
+          и многокритериальный <Badge color="pink">выбор лучших заявок</Badge>{" "}
         </Heading>
         <Heading
           size={"1"}
@@ -29,8 +29,9 @@ export const Head = () => {
           mt="6"
           color="gray"
         >
-          1. Загрузите заявки и дислокацию 2. Получайте{" "}
-          <Badge color="red">ежедневные</Badge> обновления
+          1. Загрузите заявки планируемого периода и дислокацию парка 2. Укажите
+          требуемые ограничения. 3. Получите расчет оптимального{" "}
+          <Badge color="red">плана перевозок</Badge> и его регулярное обновление
         </Heading>
       </Box>
     </Section>
