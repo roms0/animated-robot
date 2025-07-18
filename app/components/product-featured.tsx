@@ -1,34 +1,34 @@
 import { Box, Flex, Heading, Section } from "@radix-ui/themes";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-export const ProductFeatured = () => {
+export const ProductFeatured = async () => {
+  const t = await getTranslations();
   return (
-    <Section>
-      <Flex wrap={"wrap"} justify={"center"} gap="5" align={"center"}>
-        <Box>
-          <Heading weight={"regular"} color="gray" size="2">
-            партнёры
-          </Heading>
-        </Box>
-        <Box>
-          <Flex align={"center"} gap={"2"}>
-            <Image width={25} height={25} alt="cloud" src={"/cloud.png"} />
-            <Heading className="featured" weight={"medium"} size="2">
-              vk cloud
-            </Heading>
-          </Flex>
-        </Box>
-        <Box>
+    <Flex wrap={"wrap"} justify={"center"} gap="5" align={"center"}>
+      <Box>
+        <Heading weight={"regular"} color="gray" size="2">
+          {t("text_partners")}
+        </Heading>
+      </Box>
+      <Box>
+        <Flex align={"center"} gap={"2"}>
+          <Image width={25} height={25} alt="cloud" src={"/cloud.png"} />
           <Heading className="featured" weight={"medium"} size="2">
-            complitech
+            vk cloud
           </Heading>
-        </Box>
-        <Box>
-          <Heading className="featured" weight={"medium"} size="2">
-            м-групп
-          </Heading>
-        </Box>
-      </Flex>
-    </Section>
+        </Flex>
+      </Box>
+      <Box>
+        <Heading className="featured" weight={"medium"} size="2">
+          complitech
+        </Heading>
+      </Box>
+      <Box>
+        <Heading className="featured" weight={"medium"} size="2">
+          м-групп
+        </Heading>
+      </Box>
+    </Flex>
   );
 };

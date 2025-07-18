@@ -29,8 +29,12 @@ import { Railroads } from "./railroads";
 import { Autorail } from "./autorail";
 import Link from "next/link";
 import { Attachments } from "./attachments";
+import { Language } from "./language";
+import { getLocale, getTranslations } from "next-intl/server";
 
-export const DesktopMenu = () => {
+export const DesktopMenu = async () => {
+  const locale = getLocale();
+  const t = await getTranslations();
   return (
     <NavigationMenu.Root className={styles.Root}>
       <NavigationMenu.List className={styles.MenuList}>
@@ -39,16 +43,13 @@ export const DesktopMenu = () => {
             <Link href={"/"}>
               <Image alt="logo" width={14} height={16} src="/logo.jpg" />
             </Link>
-            {/* <Button variant="ghost" size={"2"}>
-              <CopyIcon /> info@smartmachines.pro
-            </Button> */}
           </Flex>
         </NavigationMenu.Item>
 
         <Flex align={"center"} ml="6" mr="6">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className={styles.Trigger}>
-              <Text>Решения</Text>{" "}
+              <Text>{t("link_solutions")}</Text>{" "}
               <CaretDownIcon className={styles.CaretDown} aria-hidden />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className={styles.Content}>
@@ -57,7 +58,7 @@ export const DesktopMenu = () => {
           </NavigationMenu.Item>
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className={styles.Trigger}>
-              <Text>Материалы</Text>{" "}
+              <Text>{t("link_materials")}</Text>{" "}
               <CaretDownIcon className={styles.CaretDown} aria-hidden />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className={styles.Content}>
@@ -73,21 +74,14 @@ export const DesktopMenu = () => {
           >
             <Flex align={"center"} gap={"1"}>
               <Badge color="gray" variant="surface">
-                демо
+                {t("text_demo")}
               </Badge>{" "}
-              <Text>Последняя миля</Text>
+              <Text>{t("text_last_mile")}</Text>
               <ExternalLinkIcon />
             </Flex>
           </NavigationMenu.Link>
         </NavigationMenu.Item>
-        <SegmentedControl.Root ml="6" mt="1" mr="2" defaultValue="rus">
-          <SegmentedControl.Item value="rus">
-            <Heading size={"4"}>🇷🇺</Heading>
-          </SegmentedControl.Item>
-          <SegmentedControl.Item value="eng">
-            <Heading size={"4"}>🇺🇸</Heading>
-          </SegmentedControl.Item>
-        </SegmentedControl.Root>
+        <Language />
 
         <NavigationMenu.Indicator className={styles.Indicator}>
           <div className={styles.Arrow} />

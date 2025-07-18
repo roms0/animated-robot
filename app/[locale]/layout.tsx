@@ -38,7 +38,7 @@ export default async function RootLayout({
             <Theme accentColor="cyan" hasBackground={false}>
               <DesktopMenu />
               <Reset>{children}</Reset>
-              <MobileMenu />
+              {/* <MobileMenu /> */}
             </Theme>
           </ThemeProvider>
         </NextIntlClientProvider>

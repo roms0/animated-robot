@@ -14,6 +14,7 @@ import { InvoiceFeatures } from "./invoice-features";
 import { DashboardFeatures } from "./dashboard-features";
 import Image from "next/image";
 import { CopyIcon } from "@radix-ui/react-icons";
+import { useTranslations } from "next-intl";
 
 const imgpath = {
   invoice: "fitting-Photoroom",
@@ -25,6 +26,7 @@ export const Presentation = () => {
   const router = useRouter();
   const ref = useRef(null);
   const [section, setsection] = useState("");
+  const t = useTranslations();
   useEffect(() => {
     const param = params.get("view");
     if (param) {
@@ -54,7 +56,7 @@ export const Presentation = () => {
           />
           <Box className="elevated-card">
             <Heading mb="2" size={"1"} weight={"bold"}>
-              Свяжитесь с нами
+              {t("title_contact_us")}
             </Heading>
             <Button variant="ghost">
               <CopyIcon /> info@smartmachines.pro
@@ -68,10 +70,10 @@ export const Presentation = () => {
           value={section}
         >
           <SegmentedControl.Item value="invoice">
-            Работа с заявками
+            {t("feature_invoice")}
           </SegmentedControl.Item>
           <SegmentedControl.Item value="dashboard">
-            Личный кабинет
+            {t("feature_dashboard")}
           </SegmentedControl.Item>
         </SegmentedControl.Root>
       </Flex>

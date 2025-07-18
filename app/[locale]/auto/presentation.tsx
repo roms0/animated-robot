@@ -16,6 +16,7 @@ import { StoreFeatures } from "./store-features";
 import { HighwayFeatures } from "./highway-features";
 import Image from "next/image";
 import { CopyIcon } from "@radix-ui/react-icons";
+import { useTranslations } from "next-intl";
 
 const imgpath = {
   store: "store-Photoroom",
@@ -28,6 +29,7 @@ export const Presentation = () => {
   const router = useRouter();
   const ref = useRef(null);
   const [section, setsection] = useState("");
+  const t = useTranslations();
   useEffect(() => {
     const param = params.get("view");
     if (param) {
@@ -57,7 +59,7 @@ export const Presentation = () => {
           />
           <Box className="elevated-card">
             <Heading mb="2" size={"1"} weight={"bold"}>
-              Свяжитесь с нами
+              {t("title_contact_us")}
             </Heading>
             <Button variant="ghost">
               <CopyIcon /> info@smartmachines.pro
@@ -71,13 +73,13 @@ export const Presentation = () => {
           value={section}
         >
           <SegmentedControl.Item value="mile">
-            Первая & последняя миля
+            {t("feature_miles")}
           </SegmentedControl.Item>
           <SegmentedControl.Item value="highway">
-            Магистральные перевозки
+            {t("feature_highway")}
           </SegmentedControl.Item>
           <SegmentedControl.Item value="store">
-            Складское управление
+            {t("feature_store")}
           </SegmentedControl.Item>
         </SegmentedControl.Root>
       </Flex>

@@ -1,70 +1,30 @@
 {
-  "long": "0",
-  "main": {
-    "title": "smartmachines",
-    "catch": {
-      "first": "ml tooling",
-      "union": "for",
-      "target": "transport logistics"
-    },
-    "mission": "Create effective pipelines & automate routine",
-    "callout": "Contact us and let's collaborate",
-    "collaboration": {
-      "usage": {
-        "title": "For anyone",
-        "description": "API solutions for tech teams, Smart machines client for UI usage, top specialists ready to answer your challenge"
-      },
-      "payment": {
-        "title": "Pay as you go",
-        "description": "Start from soft adoption, find your points of interest and scale when you ready"
-      }
-    },
-    "features": {
-      "multimodal": {
-        "title": "Multimodal",
-        "description": "Solutions crafted for small courier deliveries and large enterprises which long supply chains varies in transport types"
-      },
-      "usage": {
-        "title": "For anyone",
-        "description": "API solutions for tech teams, Smart machines client for UI usage, top specialists ready to answer your challenge"
-      },
-      "payment": {
-        "title": "Pay as you go",
-        "description": "Start from soft adoption, find your points of interest and scale when you ready"
-      },
-      "parameters": {
-        "title": "30+ Parameters",
-        "description": "Best granularity and prescision for high class analysis while keep simplicity in usage"
-      }
-    }
-  },
-  "navbar": {
-    "products": "Products",
-    "solutions": "solutions",
-    "support": "support",
-    "ui": "smart machines client",
-    "developers": "developers",
-    "lang": "en",
-    "lang title": "English"
-  },
-  "miles": {
-    "title": "miles",
-    "short": "reach out your clients faster",
-    "mission": "you know where your clients are, we show the most efficient way. a range and a scale are no concern. ship fast, know what to change and why, draw a full picture and be aware of details. grow in revenue with us."
-  },
-  "highways": {
-    "title": "highways",
-    "short": "reach out your clients faster",
-    "mission": "lots of facilities build your logistics. each has capacities and demands, schedules and log"
-  },
-  "cargo": {
-    "title": "cargo",
-    "short": "reach out your clients faster",
-    "mission": "you have a fleet. let us help you utilise it in the best way possible. arrange your cargo, manage disposables and cut your costs."
-  },
-  "broker": {
-    "title": "broker",
-    "short": "reach out your clients faster",
-    "mission": "assign tasks and fill invoices faster. automate required routines and needs for you business to earn money."
-  }
+  "title_name": "Way.Pro",
+  "link_solutions": "Solutions",
+  "link_materials": "Materials",
+  "title_hero": "Robust logistic optimisations",
+  "title_auto_hero": "ml automotive otimizations",
+  "title_rail_hero": "ml railroad freighting optimizations",
+  "title_contact_us": "Contact us",
+  "title_pro_tier": "Pro",
+  "gains_fuel": "Fuel unit cost",
+  "gains_costs_cut": "",
+  "gains_parcel_waits": "Parcel wait time",
+  "gains_rail_incomes": "",
+  "gains_rail_utilization": "Freight utilisation rate",
+  "title_auto": "Automotive",
+  "title_rail": "Railroad freights",
+  "text_demo": "trial",
+  "text_presentation": "Booklet",
+  "text_last_mile": "Last mile",
+  "text_solutions": "",
+  "text_materials": "",
+  "text_partners": "Featured in",
+  "text_showcase": "",
+  "feature_miles": "First & last miles",
+  "feature_highway": "Highway routes",
+  "feature_store": "Storage optimisaitons",
+  "feature_invoice": "Freight schema & invoicing",
+  "feature_dashboard": "Dashboards & backoffice",
+  "parameter_1": ""
 }

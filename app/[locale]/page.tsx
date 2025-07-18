@@ -6,33 +6,40 @@ import {
   Grid,
   Heading,
   Section,
-  Text,
 } from "@radix-ui/themes";
-import { CopyIcon } from "@radix-ui/react-icons";
 import { ProductFeatured } from "../components/product-featured";
 import { NumberUp } from "../components/number-up";
-import Image from "next/image";
+import { getLocale, getTranslations } from "next-intl/server";
+import { CopyIcon } from "@radix-ui/react-icons";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslations();
   return (
     <Container size={"4"} p="4">
-      <Section mt="10vh">
-        <Box m="auto">
-          <Heading size={"7"} align={"center"} weight={"medium"}>
-            Комплексная оптимизация логистики
-          </Heading>
-        </Box>
+      <Section mt="12vh">
+        <Heading mb="6" size={"6"} align={"center"} weight={"bold"}>
+          {t("title_hero")}
+        </Heading>
+        <Flex justify={"center"}>
+          <Button variant="ghost" m="auto">
+            <CopyIcon />
+            info@smartmachines.pro
+          </Button>
+        </Flex>
       </Section>
-      <ProductFeatured />
+      <Section pt="4vh">
+        <ProductFeatured />
+      </Section>
       <Section>
-        <Grid m="auto" maxWidth={"600px"} gap={"9"} columns={"2"} rows={"2"}>
+        <Grid m="auto" maxWidth={"600px"} gap={"9"} columns={"3"} rows={"1"}>
           <Box className="elevated-card">
-            <NumberUp to={131} />
-            <NumberUp to={91} />
+            + <NumberUp to={12} />% скорость доставки товара в пункт выдачи
           </Box>
           <Box className="elevated-card">
-            <NumberUp to={800} />
-            <NumberUp to={121} />
+            + <NumberUp to={3} />% к экономии на топливе
+          </Box>
+          <Box className="elevated-card">
+            + <NumberUp to={9} />% к оборачиваемости парка вагонов
           </Box>
         </Grid>
       </Section>

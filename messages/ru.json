@@ -1,70 +1,30 @@
 {
-  "long": "1",
-  "main": {
-    "title": "smartmachines",
-    "catch": {
-      "first": "ml инструменты",
-      "union": "для",
-      "target": "грузовой логистики"
-    },
-    "mission": "Оптимизируйте логистику и увеличьте прибыль бизнеса",
-    "callout": "Скопируйте адрес, напишите нам, будем работать вместе",
-    "collaboration": {
-      "usage": {
-        "title": "Удобные интеграции",
-        "description": "API интеграции для слаженных технических команд. Smart machines клиент для общего использования. Команда опытных специалистов всегда готовая помочь"
-      },
-      "payment": {
-        "title": "Гибкая оплата",
-        "description": "Платите только за те решения, которыми вы пользуетесь"
-      }
-    },
-    "features": {
-      "multimodal": {
-        "title": "Multimodal",
-        "description": "Solutions crafted for small courier deliveries and large enterprises which long supply chains varies in transport types"
-      },
-      "usage": {
-        "title": "Удобные интеграции",
-        "description": "API интеграции для слаженных технических команд. Smart machines клиент для общего использования. Команда опытных специалистов всегда готовая помочь"
-      },
-      "payment": {
-        "title": "Гибкая оплата",
-        "description": "Платите только за те решения, которыми вы пользуетесь"
-      },
-      "parameters": {
-        "title": "30+ Метрик",
-        "description": "Наибольшее количество параметров при расчете оптимальных решений логистических задач. Для каждой задачи свои ключевые параметры"
-      }
-    }
-  },
-  "navbar": {
-    "products": "Продукты",
-    "solutions": "solutions",
-    "support": "support",
-    "ui": "smart machines client",
-    "developers": "developers",
-    "lang": "ru",
-    "lang title": "Русский"
-  },
-  "miles": {
-    "title": "miles",
-    "short": "reach out your clients faster",
-    "mission": "you know where your clients are, we show the most efficient way. a range and a scale are no concern. ship fast, know what to change and why, draw a full picture and be aware of details. grow in revenue with us."
-  },
-  "highways": {
-    "title": "highways",
-    "short": "reach out your clients faster",
-    "mission": "lots of facilities build your logistics. each has capacities and demands, schedules and log"
-  },
-  "cargo": {
-    "title": "cargo",
-    "short": "reach out your clients faster",
-    "mission": "you have a fleet. let us help you utilise it in the best way possible. arrange your cargo, manage disposables and cut your costs."
-  },
-  "broker": {
-    "title": "broker",
-    "short": "reach out your clients faster",
-    "mission": "assign tasks and fill invoices faster. automate required routines and needs for you business to earn money."
-  }
+  "title_name": "Путь.Про",
+  "link_solutions": "Решения",
+  "link_materials": "Материалы",
+  "title_hero": "Комплексная оптимизация логистики",
+  "title_auto_hero": "ml оптимизация контура автомобильной логистики",
+  "title_rail_hero": "ml оптимизация железнодорожной логистики оператора",
+  "title_contact_us": "Свяжитесь с нами",
+  "title_pro_tier": "Про",
+  "gains_fuel": "Литр топлива",
+  "gains_costs_cut": "",
+  "gains_parcel_waits": "Ожидание товара",
+  "gains_rail_incomes": "",
+  "gains_rail_utilization": "Коэфициент использования парка",
+  "title_auto": "Автомобильная логистика",
+  "title_rail": "Железнодорожная логистика",
+  "text_demo": "Демо",
+  "text_presentation": "Презентация",
+  "text_last_mile": "Последняя миля",
+  "text_solutions": "",
+  "text_materials": "",
+  "text_partners": "Партнёры",
+  "text_showcase": "",
+  "feature_miles": "Первая & последняя мили",
+  "feature_highway": "Магистральные перевозки",
+  "feature_store": "Складские оптимизации",
+  "feature_invoice": "План перевозок & работа с заявками",
+  "feature_dashboard": "Аналитика & личный кабинет",
+  "parameter_1": ""
 }

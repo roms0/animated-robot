@@ -1,15 +1,16 @@
 "use client";
-import { Box, Flex, Grid, Heading } from "@radix-ui/themes";
-import { HashLink } from "../hash-link/hash-link";
+import { Box, Grid, Heading } from "@radix-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const Autorail = () => {
+  const t = useTranslations();
   return (
     <Grid width={"550px"} gapX={"6"} pt="6" columns={"2"} p="4">
       <Box>
         <Heading size={"1"} weight={"bold"}>
-          автомобильная логистика
+          {t("title_auto")}
         </Heading>
         <Grid mt="4" gapX={"2"} columns={"40px 200px"} align={"center"}>
           <Box>
@@ -22,7 +23,7 @@ export const Autorail = () => {
           </Box>
           <Link href="/auto?view=mile">
             <Heading size={"2"} weight={"medium"}>
-              первая и последняя мили
+              {t("feature_miles")}
             </Heading>
           </Link>
           <Box>
@@ -36,7 +37,7 @@ export const Autorail = () => {
           </Box>
           <Link href="/auto?view=highway">
             <Heading size={"2"} weight={"medium"}>
-              магистральные перевозки
+              {t("feature_highway")}
             </Heading>
           </Link>
           <Box>
@@ -49,14 +50,14 @@ export const Autorail = () => {
           </Box>
           <Link href="/auto?view=store">
             <Heading size={"2"} weight={"medium"}>
-              зонирование складов
+              {t("feature_store")}
             </Heading>
           </Link>
         </Grid>
       </Box>
       <Box>
         <Heading size={"1"} weight={"bold"}>
-          железнодорожная логистика
+          {t("title_rail")}
         </Heading>
         <Grid mt="4" gapX={"2"} columns={"40px 200px"} align={"center"}>
           <Box>
@@ -69,7 +70,7 @@ export const Autorail = () => {
           </Box>
           <Link href={"/rail?view=invoice"}>
             <Heading size={"2"} weight={"medium"}>
-              план перевозок и работа с заявками
+              {t("feature_invoice")}
             </Heading>
           </Link>
           <Box>
@@ -82,7 +83,7 @@ export const Autorail = () => {
           </Box>
           <Link href={"/rail?view=dashboard"}>
             <Heading size={"2"} weight={"medium"}>
-              аналитика и личный кабинет
+              {t("feature_dashboard")}
             </Heading>
           </Link>
         </Grid>
