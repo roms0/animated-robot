@@ -6,17 +6,19 @@ import {
   Grid,
   Heading,
   Section,
+  Text,
 } from "@radix-ui/themes";
 import { ProductFeatured } from "../components/product-featured";
 import { NumberUp } from "../components/number-up";
 import { getLocale, getTranslations } from "next-intl/server";
 import { CopyIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 export default async function Home() {
   const t = await getTranslations();
   return (
     <Container size={"4"} p="4">
-      <Section mt="12vh">
+      <Section mt="8vh">
         <Heading mb="6" size={"6"} align={"center"} weight={"bold"}>
           {t("title_hero")}
         </Heading>
@@ -31,17 +33,47 @@ export default async function Home() {
         <ProductFeatured />
       </Section>
       <Section>
-        <Grid m="auto" maxWidth={"600px"} gap={"9"} columns={"3"} rows={"1"}>
-          <Box className="elevated-card">
-            + <NumberUp to={12} />% скорость доставки товара в пункт выдачи
+        <Flex justify={"between"}>
+          <Box m="auto" width={"320px"}>
+            <Heading align={"center"} size={"3"} weight={"medium"}>
+              {t("up to")}
+            </Heading>
+            <Heading align={"center"}>
+              <span className="farfetch">
+                <NumberUp to={12} />%
+              </span>
+            </Heading>
+            <Heading align={"center"} size={"3"} weight={"medium"}>
+              {t("metric wait time")}
+            </Heading>
           </Box>
-          <Box className="elevated-card">
-            + <NumberUp to={3} />% к экономии на топливе
+          <Box m="auto" width={"320px"}>
+            <Heading align={"center"} size={"3"} weight={"medium"}>
+              {t("up to")}
+            </Heading>
+            <Heading align={"center"}>
+              <span className="farfetch">
+                <NumberUp to={3} />%
+              </span>
+            </Heading>
+            <Heading align={"center"} size={"3"} weight={"medium"}>
+              {t("metric fuel cost")}
+            </Heading>
           </Box>
-          <Box className="elevated-card">
-            + <NumberUp to={9} />% к оборачиваемости парка вагонов
+          <Box m="auto" width={"320px"}>
+            <Heading align={"center"} size={"3"} weight={"medium"}>
+              {t("up to")}
+            </Heading>
+            <Heading align={"center"}>
+              <span className="farfetch">
+                <NumberUp to={9} />%
+              </span>
+            </Heading>
+            <Heading align={"center"} size={"3"} weight={"medium"}>
+              {t("metric utilization")}
+            </Heading>
           </Box>
-        </Grid>
+        </Flex>
       </Section>
     </Container>
   );

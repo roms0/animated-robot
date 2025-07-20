@@ -21,10 +21,77 @@
   "text_materials": "",
   "text_partners": "Featured in",
   "text_showcase": "",
-  "feature_miles": "First & last miles",
-  "feature_highway": "Highway routes",
-  "feature_store": "Storage optimisaitons",
-  "feature_invoice": "Freight schema & invoicing",
-  "feature_dashboard": "Dashboards & backoffice",
-  "parameter_1": ""
+  "miles": "First & last miles",
+  "highway": "Highway routes",
+  "store": "Storage optimisaitons",
+  "invoice": "Freight schema & invoicing",
+  "dashboard": "Dashboards & backoffice",
+
+  "param min time": "time minimization",
+  "param min cost": "cost minimization",
+  "param cargo per point": "cargo per delivery point",
+  "param time slots": "point availability slots",
+  "param vertical only": "vertical arrangement only",
+  "param delivery priority": "delivety priority",
+  "param dont stack": "don't stack",
+
+  "param store worktime": "store availability slots",
+  "param vehicle load": "min/max cargo per vehicle",
+  "param vehicle type": "vehicle type",
+  "param trip frequency": "trips frequency",
+
+  "param points per cluster": "delivery points per cluster",
+  "param range form cluster": "range from a store",
+  "param cargo load per point": "cargo per one devilery point",
+
+  "param tarif": "stuffed/idle tariff",
+  "param dispatches": "freight dispatches per month",
+  "param cargo type": "cargo type",
+  "param dispatch density": "dispatch density",
+  "param arrival density": "arrival density",
+  "param owner rank": "cargo owner ranking",
+  "param cargo wait time": "idle time before load",
+  "param issue schedule": "load schedule",
+
+  "feature routing title": "Routing",
+  "feature routing desc": "Optimal routes between the warehouse and your delivery points",
+  "feature fragile title": "Special Cargo",
+  "feature fragile desc": "Optimized delivery of standard, fragile, and oversized cargo",
+  "feature addition title": "Additional Requests",
+  "feature addition desc": "We’ll suggest when it’s beneficial to expand your fleet",
+  "feature alter title": "Alternative Points",
+  "feature alter desc": "Smart assignment of existing locations to the origin or destination warehouse",
+
+  "feature highway title": "Transit Flow List",
+  "feature highway desc": "Optimal cargo movement from warehouse to warehouse across one or multiple legs",
+  "feature fuel title": "Fuel Cost Optimization",
+  "feature fuel desc": "Route optimization via fuel stations based on fuel cards and fuel prices",
+  "feature speed title": "Route Speeds",
+  "feature speed desc": "ML models for generating effective standard speeds for each route",
+
+  "feature zone title": "Optimal zoning",
+  "feature zone desc": "Balanced delivery zones to optimize warehouse operations",
+
+  "feature schema title": "Optimal Fleet Downtime and Logistics Schemes",
+  "feature schema desc": "Market conditions and configured parameters taken into account to maximize profitability",
+
+  "feature assessment title": "Order Cost Estimation",
+  "feature assessment desc": "Automatic calculation of an optimal transportation rate and profitability within the delivery scheme",
+
+  "feature assignment title": "Assignment",
+  "feature assignment desc": "Accurate recommendation of the optimal assignment station for a railcar in both short- and long-haul approaches",
+
+  "feature ranking title": "Client Rating",
+  "feature ranking desc": "Multi-criteria evaluation of cargo owners",
+
+  "feature managing title": "Fleet Management Center",
+  "feature managing desc": "Automation of request intake and processing, electronic document management, planning, and pricing calculations",
+
+  "feature metrics title": "Proven Key Metrics",
+  "feature metrics desc": "Performance evaluation of fleet operations",
+
+  "up to": "up to",
+  "metric wait time": "Reduced Goods Waiting Time",
+  "metric fuel cost": "Lower Fuel Costs",
+  "metric utilization": "Increased Fleet Turnover"
 }

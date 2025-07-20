@@ -1,6 +1,9 @@
+"use client";
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
+import { useTranslations } from "next-intl";
 
 export const MileFeatures = () => {
+  const t = useTranslations();
   return (
     <Grid
       columns={"2"}
@@ -11,21 +14,16 @@ export const MileFeatures = () => {
       gap={"4"}
     >
       <Box className="elevated-card">
-        <Flex gap={"3"} wrap={"wrap"}>
-          <Box className="parameter-box">
-            Функция<sup></sup> оптимизации
-          </Box>
-          <Box className="parameter-box">
-            м<sup>3</sup> на точку
-          </Box>
-          <Box className="parameter-box">
-            Объем<sup></sup> кузова
-          </Box>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param min time")}</Box>
+          <Box className="parameter-box">{t("param min cost")}</Box>
+          <Box className="parameter-box">{t("param cargo per point")}</Box>
+          <Box className="parameter-box">{t("param time slots")}</Box>
         </Flex>
         <Box mt="5">
           <Text size={"2"}>
-            <span className="farfetch">Маршрутизация</span> Оптимальные маршруты
-            между складом и вашими точками доставки
+            <span className="farfetch">{t("feature routing title")}.</span>{" "}
+            {t("feature routing desc")}.
           </Text>
         </Box>
       </Box>
@@ -43,36 +41,29 @@ export const MileFeatures = () => {
           variant="solid"
           style={{ position: "absolute", top: "-10px", right: "-20px" }}
         >
-          Путь.Про
+          {t("title_name")}
         </Badge>
-        <Flex gap={"3"} wrap={"wrap"}>
-          <Box className="parameter-box">
-            Функция<sup></sup> оптимизации
-          </Box>
-          <Box className="parameter-box">
-            м<sup>3</sup> на точку
-          </Box>
-          <Box className="parameter-box">
-            Объем<sup></sup> кузова
-          </Box>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param vertical only")}</Box>
+          <Box className="parameter-box">{t("param delivery priority")}</Box>
+          <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Особый груз</span> Оптимизация доставки
-            стандартного, а также хрупкого и негабаритного груза
+            <span className="farfetch">{t("feature fragile title")}.</span>{" "}
+            {t("feature fragile desc")}.
           </Text>
         </Box>
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Дозаявка</span> Подскажем, для какой
-            задачи будет выгодно расширить парк
+            <span className="farfetch">{t("feature addition title")}.</span>{" "}
+            {t("feature addition desc")}.
           </Text>
         </Box>
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Альтернативные точки</span>{" "}
-            Интеллектуальная привязка существующих точек к складу отправления
-            или назначения
+            <span className="farfetch">{t("feature alter title")}.</span>{" "}
+            {t("feature alter desc")}.
           </Text>
         </Box>
       </Flex>

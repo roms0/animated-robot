@@ -22,8 +22,8 @@ export const NumberUp = ({ to = 100 }: NumberUpProps) => {
     { scope: num }
   );
   return (
-    <Box ref={num}>
-      <Heading id="target">{to}</Heading>
-    </Box>
+    <span ref={num}>
+      <span id="target">{to}</span>
+    </span>
   );
 };

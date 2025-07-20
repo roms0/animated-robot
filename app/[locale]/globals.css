@@ -80,7 +80,7 @@ a {
 }
 
 .farfetch {
-    background: -webkit-linear-gradient(20deg, var(--purple-10) -40%, var(--sky-11) 120%);
+    background: -webkit-linear-gradient(20deg, var(--pink-10) -40%, var(--blue-11) 120%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -105,6 +105,7 @@ a {
     background-color: var(--mauve-1);
     padding-left: var(--space-1);
     padding-right: var(--space-1);
+    padding-top: calc(var(--space-1) / 2);
     border: 1px solid var(--mauve-6);
     font-size: var(--font-size-1);
     color: var(--mauve-12);

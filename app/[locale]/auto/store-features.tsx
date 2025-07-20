@@ -1,6 +1,8 @@
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
+import { useTranslations } from "next-intl";
 
 export const StoreFeatures = () => {
+  const t = useTranslations();
   return (
     <Grid
       columns={"1"}
@@ -25,23 +27,17 @@ export const StoreFeatures = () => {
           variant="solid"
           style={{ position: "absolute", top: "-10px", right: "-20px" }}
         >
-          Путь.Про
+          {t("title_name")}
         </Badge>
-        <Flex gap={"3"} wrap={"wrap"}>
-          <Box className="parameter-box">
-            Функция<sup></sup> оптимизации
-          </Box>
-          <Box className="parameter-box">
-            м<sup>3</sup> на точку
-          </Box>
-          <Box className="parameter-box">
-            Объем<sup></sup> кузова
-          </Box>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param points per cluster")}</Box>
+          <Box className="parameter-box">{t("param range form cluster")}</Box>
+          <Box className="parameter-box">{t("param cargo load per point")}</Box>
         </Flex>
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Оптимальное зонирование</span>{" "}
-            Сбалансированные зоны доставки для оптимизации работы склада
+            <span className="farfetch">{t("feature zone title")}.</span>{" "}
+            {t("feature zone desc")}.
           </Text>
         </Box>
       </Flex>

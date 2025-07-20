@@ -73,13 +73,13 @@ export const Presentation = () => {
           value={section}
         >
           <SegmentedControl.Item value="mile">
-            {t("feature_miles")}
+            {t("miles")}
           </SegmentedControl.Item>
           <SegmentedControl.Item value="highway">
-            {t("feature_highway")}
+            {t("highway")}
           </SegmentedControl.Item>
           <SegmentedControl.Item value="store">
-            {t("feature_store")}
+            {t("store")}
           </SegmentedControl.Item>
         </SegmentedControl.Root>
       </Flex>

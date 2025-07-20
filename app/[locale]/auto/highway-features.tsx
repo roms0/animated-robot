@@ -1,6 +1,8 @@
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
+import { useTranslations } from "next-intl";
 
 export const HighwayFeatures = () => {
+  const t = useTranslations();
   return (
     <Grid
       columns={"2"}
@@ -11,22 +13,14 @@ export const HighwayFeatures = () => {
       gap={"4"}
     >
       <Box className="elevated-card">
-        <Flex gap={"3"} wrap={"wrap"}>
-          <Box className="parameter-box">
-            Функция<sup></sup> оптимизации
-          </Box>
-          <Box className="parameter-box">
-            м<sup>3</sup> на точку
-          </Box>
-          <Box className="parameter-box">
-            Объем<sup></sup> кузова
-          </Box>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param store worktime")}</Box>
+          <Box className="parameter-box">{t("param vehicle load")}</Box>
         </Flex>
         <Box mt="5">
           <Text size={"2"}>
-            <span className="farfetch">Список потоков следования</span>{" "}
-            Оптимальные движение груза из склада на склад по одному и более
-            плечам
+            <span className="farfetch">{t("feature highway title")}.</span>{" "}
+            {t("feature highway desc")}.
           </Text>
         </Box>
       </Box>
@@ -44,37 +38,31 @@ export const HighwayFeatures = () => {
           variant="solid"
           style={{ position: "absolute", top: "-10px", right: "-20px" }}
         >
-          Путь.Про
+          {t("title_name")}
         </Badge>
-        <Flex gap={"3"} wrap={"wrap"}>
-          <Box className="parameter-box">
-            Функция<sup></sup> оптимизации
-          </Box>
-          <Box className="parameter-box">
-            м<sup>3</sup> на точку
-          </Box>
-          <Box className="parameter-box">
-            Объем<sup></sup> кузова
-          </Box>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param vehicle type")}</Box>
+          <Box className="parameter-box">{t("param trips frequency")}</Box>
+          <Box className="parameter-box">{t("param vertical only")}</Box>
+          <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>
 
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Оптимизация затрат на топливо</span>{" "}
-            Построение оптимальных маршрутов по АЗС с учетом топливных карт и
-            цены топлива
+            <span className="farfetch">{t("feature fuel title")}.</span>{" "}
+            {t("feature fuel title")}.
           </Text>
         </Box>
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Скорости на маршруте</span> ML-модели
-            формирования эффективных нормативных скоростей по каждому маршруту
+            <span className="farfetch">{t("feature speed title")}.</span>{" "}
+            {t("feature speed desc")}.
           </Text>
         </Box>
         <Box>
           <Text size={"2"}>
-            <span className="farfetch">Особый груз</span> Оптимизация доставки
-            стандартного, а также хрупкого и негабаритного груза
+            <span className="farfetch">{t("feature fragile title")}</span>{" "}
+            {t("feature fragile desc")}.
           </Text>
         </Box>
       </Flex>

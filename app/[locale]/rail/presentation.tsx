@@ -70,10 +70,10 @@ export const Presentation = () => {
           value={section}
         >
           <SegmentedControl.Item value="invoice">
-            {t("feature_invoice")}
+            {t("invoice")}
           </SegmentedControl.Item>
           <SegmentedControl.Item value="dashboard">
-            {t("feature_dashboard")}
+            {t("dashboard")}
           </SegmentedControl.Item>
         </SegmentedControl.Root>
       </Flex>

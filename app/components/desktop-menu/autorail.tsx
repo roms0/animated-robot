@@ -23,7 +23,7 @@ export const Autorail = () => {
           </Box>
           <Link href="/auto?view=mile">
             <Heading size={"2"} weight={"medium"}>
-              {t("feature_miles")}
+              {t("miles")}
             </Heading>
           </Link>
           <Box>
@@ -37,7 +37,7 @@ export const Autorail = () => {
           </Box>
           <Link href="/auto?view=highway">
             <Heading size={"2"} weight={"medium"}>
-              {t("feature_highway")}
+              {t("highway")}
             </Heading>
           </Link>
           <Box>
@@ -50,7 +50,7 @@ export const Autorail = () => {
           </Box>
           <Link href="/auto?view=store">
             <Heading size={"2"} weight={"medium"}>
-              {t("feature_store")}
+              {t("store")}
             </Heading>
           </Link>
         </Grid>
@@ -70,7 +70,7 @@ export const Autorail = () => {
           </Box>
           <Link href={"/rail?view=invoice"}>
             <Heading size={"2"} weight={"medium"}>
-              {t("feature_invoice")}
+              {t("invoice")}
             </Heading>
           </Link>
           <Box>
@@ -83,7 +83,7 @@ export const Autorail = () => {
           </Box>
           <Link href={"/rail?view=dashboard"}>
             <Heading size={"2"} weight={"medium"}>
-              {t("feature_dashboard")}
+              {t("dashboard")}
             </Heading>
           </Link>
         </Grid>
