@@ -34,6 +34,8 @@ export const Presentation = () => {
     const param = params.get("view");
     if (param) {
       setsection(param);
+    } else {
+      router.push(`?view=mile`, { scroll: false });
     }
   }, [params]);
   useEffect(() => {

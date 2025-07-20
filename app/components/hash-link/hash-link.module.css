@@ -1,9 +1,0 @@
-.link {
-    all: unset;
-	outline: none;
-	text-decoration: none;
-	user-select: none;
-    display: block;
-    padding: var(--space-1);
-    cursor: pointer;
-}

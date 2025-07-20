@@ -42,7 +42,7 @@ export const HighwayFeatures = () => {
         </Badge>
         <Flex gap={"1"} wrap={"wrap"}>
           <Box className="parameter-box">{t("param vehicle type")}</Box>
-          <Box className="parameter-box">{t("param trips frequency")}</Box>
+          <Box className="parameter-box">{t("param trip frequency")}</Box>
           <Box className="parameter-box">{t("param vertical only")}</Box>
           <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>

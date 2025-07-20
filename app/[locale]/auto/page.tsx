@@ -1,6 +1,6 @@
 import { Container, Section } from "@radix-ui/themes";
 import React from "react";
-import { Head } from "./alternative/head";
+import { Head } from "./head";
 import { ProductFeatured } from "@/app/components/product-featured";
 import { Presentation } from "./presentation";
 
