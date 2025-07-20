@@ -1,6 +1,5 @@
 "use client";
 import { Box, Flex, Grid, Heading } from "@radix-ui/themes";
-import { HashLink } from "../hash-link/hash-link";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
