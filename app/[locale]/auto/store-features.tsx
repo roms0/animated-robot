@@ -1,5 +1,6 @@
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const StoreFeatures = () => {
   const t = useTranslations();
@@ -34,12 +35,18 @@ export const StoreFeatures = () => {
           <Box className="parameter-box">{t("param range form cluster")}</Box>
           <Box className="parameter-box">{t("param cargo load per point")}</Box>
         </Flex>
-        <Box>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="clusters"
+            src={"/features/clusters.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature zone title")}.</span>{" "}
             {t("feature zone desc")}.
           </Text>
-        </Box>
+        </Flex>
       </Flex>
     </Grid>
   );

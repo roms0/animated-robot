@@ -1,6 +1,7 @@
 "use client";
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const MileFeatures = () => {
   const t = useTranslations();
@@ -20,12 +21,18 @@ export const MileFeatures = () => {
           <Box className="parameter-box">{t("param cargo per point")}</Box>
           <Box className="parameter-box">{t("param time slots")}</Box>
         </Flex>
-        <Box mt="5">
+        <Flex mt="5" align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="intersection"
+            src={"/features/interjection.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature routing title")}.</span>{" "}
             {t("feature routing desc")}.
           </Text>
-        </Box>
+        </Flex>
       </Box>
       <Flex
         gap="5"
@@ -48,24 +55,42 @@ export const MileFeatures = () => {
           <Box className="parameter-box">{t("param delivery priority")}</Box>
           <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>
-        <Box>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="fragile"
+            src={"/features/fragile.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature fragile title")}.</span>{" "}
             {t("feature fragile desc")}.
           </Text>
-        </Box>
-        <Box>
+        </Flex>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="addition"
+            src={"/features/addition.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature addition title")}.</span>{" "}
             {t("feature addition desc")}.
           </Text>
-        </Box>
-        <Box>
+        </Flex>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="clusters"
+            src={"/features/clusters.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature alter title")}.</span>{" "}
             {t("feature alter desc")}.
           </Text>
-        </Box>
+        </Flex>
       </Flex>
     </Grid>
   );

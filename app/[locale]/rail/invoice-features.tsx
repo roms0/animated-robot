@@ -1,5 +1,6 @@
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const InvoiceFeatures = () => {
   const t = useTranslations();
@@ -19,10 +20,18 @@ export const InvoiceFeatures = () => {
           <Box className="parameter-box">{t("param cargo type")}</Box>
         </Flex>
         <Box mt="5">
-          <Text size={"2"}>
-            <span className="farfetch">{t("feature schema title")}.</span>{" "}
-            {t("feature schema desc")}.
-          </Text>
+          <Flex mt="5" align={"center"} gap={"2"}>
+            <Image
+              width={60}
+              height={60}
+              alt="tree"
+              src={"/features/tree.png"}
+            />
+            <Text size={"2"}>
+              <span className="farfetch">{t("feature schema title")}.</span>{" "}
+              {t("feature schema desc")}.
+            </Text>
+          </Flex>
         </Box>
       </Box>
       <Flex
@@ -49,24 +58,42 @@ export const InvoiceFeatures = () => {
           <Box className="parameter-box">{t("param cargo wait time")}</Box>
           <Box className="parameter-box">{t("param issue schedule")}</Box>
         </Flex>
-        <Box>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="addition"
+            src={"/features/addition.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature assessment title")}.</span>{" "}
             {t("feature assessment desc")}.
           </Text>
-        </Box>
-        <Box>
+        </Flex>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="station"
+            src={"/features/station.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature assignment title")}.</span>{" "}
             {t("feature assignment desc")}.
           </Text>
-        </Box>
-        <Box>
+        </Flex>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="ranking"
+            src={"/features/ranking.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature ranking title")}.</span>{" "}
             {t("feature ranking desc")}.
           </Text>
-        </Box>
+        </Flex>
       </Flex>
     </Grid>
   );

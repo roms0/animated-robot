@@ -1,5 +1,6 @@
 import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const HighwayFeatures = () => {
   const t = useTranslations();
@@ -17,12 +18,18 @@ export const HighwayFeatures = () => {
           <Box className="parameter-box">{t("param store worktime")}</Box>
           <Box className="parameter-box">{t("param vehicle load")}</Box>
         </Flex>
-        <Box mt="5">
+        <Flex mt="5" align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="shelf"
+            src={"/features/shelf.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature highway title")}.</span>{" "}
             {t("feature highway desc")}.
           </Text>
-        </Box>
+        </Flex>
       </Box>
       <Flex
         gap="5"
@@ -47,24 +54,37 @@ export const HighwayFeatures = () => {
           <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>
 
-        <Box>
+        <Flex align={"center"} gap={"2"}>
+          <Image width={60} height={60} alt="fuel" src={"/features/fuel.png"} />
           <Text size={"2"}>
             <span className="farfetch">{t("feature fuel title")}.</span>{" "}
             {t("feature fuel title")}.
           </Text>
-        </Box>
-        <Box>
+        </Flex>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="stopwatch"
+            src={"/features/stopwatch.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature speed title")}.</span>{" "}
             {t("feature speed desc")}.
           </Text>
-        </Box>
-        <Box>
+        </Flex>
+        <Flex align={"center"} gap={"2"}>
+          <Image
+            width={60}
+            height={60}
+            alt="fragile"
+            src={"/features/fragile.png"}
+          />
           <Text size={"2"}>
             <span className="farfetch">{t("feature fragile title")}</span>{" "}
             {t("feature fragile desc")}.
           </Text>
-        </Box>
+        </Flex>
       </Flex>
     </Grid>
   );
