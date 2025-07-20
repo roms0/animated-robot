@@ -31,6 +31,8 @@ export const Presentation = () => {
     const param = params.get("view");
     if (param) {
       setsection(param);
+    } else {
+      router.push(`?view=invoice`, { scroll: false });
     }
   }, [params]);
   useEffect(() => {
