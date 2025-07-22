@@ -10,6 +10,7 @@ import { Accordion } from "radix-ui";
 import Image from "next/image";
 import Link from "next/link";
 import { Language } from "../desktop-menu/language";
+import { useMediaQuery } from "react-responsive";
 
 const parsing = {
   "": { title: "Путь.Про", path: "/", color: "gray" },
@@ -38,7 +39,6 @@ const BreadCrumbs = ({ chunks }: { chunks: string[] }) => {
 export const MobileMenu = () => {
   const { isOpen, toggle } = useMenuStore();
   const t = useTranslations();
-
   return (
     <>
       <Box className={`${classes.menu} ${isOpen && classes["menu-seen"]}`}>

@@ -14,9 +14,6 @@ export default function Home() {
           <ProductFeatured />
         </Section>
         <Presentation />
-        {/* <Box display={{ initial: "block", md: "none" }}>
-          <MobilePresentation />
-        </Box> */}
       </Container>
     </>
   );
