@@ -30,11 +30,7 @@ export const StoreFeatures = () => {
         >
           {t("title_name")}
         </Badge>
-        <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param points per cluster")}</Box>
-          <Box className="parameter-box">{t("param range form cluster")}</Box>
-          <Box className="parameter-box">{t("param cargo load per point")}</Box>
-        </Flex>
+
         <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
@@ -46,6 +42,11 @@ export const StoreFeatures = () => {
             <span className="farfetch">{t("feature zone title")}.</span>{" "}
             {t("feature zone desc")}.
           </Text>
+        </Flex>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param points per cluster")}</Box>
+          <Box className="parameter-box">{t("param range form cluster")}</Box>
+          <Box className="parameter-box">{t("param cargo load per point")}</Box>
         </Flex>
       </Flex>
     </Grid>

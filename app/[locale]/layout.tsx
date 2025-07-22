@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Reset, Theme } from "@radix-ui/themes";
+import { Box, Reset, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from "next/font/google";
 import { ThemeProvider } from "next-themes";
@@ -35,7 +35,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider>
           <ThemeProvider attribute={"class"}>
-            <Theme accentColor="cyan" hasBackground={false}>
+            <Theme accentColor="cyan">
               <DesktopMenu />
               <Reset>{children}</Reset>
               {/* <MobileMenu /> */}

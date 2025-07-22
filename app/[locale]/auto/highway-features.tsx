@@ -14,11 +14,7 @@ export const HighwayFeatures = () => {
       gap={"4"}
     >
       <Box className="elevated-card">
-        <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param store worktime")}</Box>
-          <Box className="parameter-box">{t("param vehicle load")}</Box>
-        </Flex>
-        <Flex mt="5" align={"center"} gap={"2"}>
+        <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
             height={60}
@@ -29,6 +25,10 @@ export const HighwayFeatures = () => {
             <span className="farfetch">{t("feature highway title")}.</span>{" "}
             {t("feature highway desc")}.
           </Text>
+        </Flex>
+        <Flex mt="5" gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param store worktime")}</Box>
+          <Box className="parameter-box">{t("param vehicle load")}</Box>
         </Flex>
       </Box>
       <Flex
@@ -47,18 +47,11 @@ export const HighwayFeatures = () => {
         >
           {t("title_name")}
         </Badge>
-        <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param vehicle type")}</Box>
-          <Box className="parameter-box">{t("param trip frequency")}</Box>
-          <Box className="parameter-box">{t("param vertical only")}</Box>
-          <Box className="parameter-box">{t("param dont stack")}</Box>
-        </Flex>
-
         <Flex align={"center"} gap={"2"}>
           <Image width={60} height={60} alt="fuel" src={"/features/fuel.png"} />
           <Text size={"2"}>
             <span className="farfetch">{t("feature fuel title")}.</span>{" "}
-            {t("feature fuel title")}.
+            {t("feature fuel desc")}.
           </Text>
         </Flex>
         <Flex align={"center"} gap={"2"}>
@@ -84,6 +77,12 @@ export const HighwayFeatures = () => {
             <span className="farfetch">{t("feature fragile title")}</span>{" "}
             {t("feature fragile desc")}.
           </Text>
+        </Flex>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param vehicle type")}</Box>
+          <Box className="parameter-box">{t("param trip frequency")}</Box>
+          <Box className="parameter-box">{t("param vertical only")}</Box>
+          <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>
       </Flex>
     </Grid>

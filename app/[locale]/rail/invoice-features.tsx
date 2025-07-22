@@ -14,25 +14,18 @@ export const InvoiceFeatures = () => {
       gap={"4"}
     >
       <Box className="elevated-card">
-        <Flex gap={"1"} wrap={"wrap"}>
+        <Flex align={"center"} gap={"2"}>
+          <Image width={60} height={60} alt="tree" src={"/features/tree.png"} />
+          <Text size={"2"}>
+            <span className="farfetch">{t("feature schema title")}.</span>{" "}
+            {t("feature schema desc")}.
+          </Text>
+        </Flex>
+        <Flex mt="5" gap={"1"} wrap={"wrap"}>
           <Box className="parameter-box">{t("param tarif")}</Box>
           <Box className="parameter-box">{t("param dispatches")}</Box>
           <Box className="parameter-box">{t("param cargo type")}</Box>
         </Flex>
-        <Box mt="5">
-          <Flex mt="5" align={"center"} gap={"2"}>
-            <Image
-              width={60}
-              height={60}
-              alt="tree"
-              src={"/features/tree.png"}
-            />
-            <Text size={"2"}>
-              <span className="farfetch">{t("feature schema title")}.</span>{" "}
-              {t("feature schema desc")}.
-            </Text>
-          </Flex>
-        </Box>
       </Box>
       <Flex
         gap="5"
@@ -51,13 +44,7 @@ export const InvoiceFeatures = () => {
         >
           {t("title_name")}
         </Badge>
-        <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param dispatch density")}</Box>
-          <Box className="parameter-box">{t("param arrival density")}</Box>
-          <Box className="parameter-box">{t("param owner rank")}</Box>
-          <Box className="parameter-box">{t("param cargo wait time")}</Box>
-          <Box className="parameter-box">{t("param issue schedule")}</Box>
-        </Flex>
+
         <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
@@ -93,6 +80,13 @@ export const InvoiceFeatures = () => {
             <span className="farfetch">{t("feature ranking title")}.</span>{" "}
             {t("feature ranking desc")}.
           </Text>
+        </Flex>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param dispatch density")}</Box>
+          <Box className="parameter-box">{t("param arrival density")}</Box>
+          <Box className="parameter-box">{t("param owner rank")}</Box>
+          <Box className="parameter-box">{t("param cargo wait time")}</Box>
+          <Box className="parameter-box">{t("param issue schedule")}</Box>
         </Flex>
       </Flex>
     </Grid>

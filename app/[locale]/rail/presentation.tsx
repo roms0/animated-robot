@@ -15,10 +15,15 @@ import { DashboardFeatures } from "./dashboard-features";
 import Image from "next/image";
 import { CopyIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
+import { Contacts } from "@/app/components/contacts/contacts";
 
 const imgpath = {
-  invoice: "fitting-Photoroom",
-  dashboard: "pc-Photoroom",
+  invoice: [
+    "fitting-Photoroom",
+    "closed-container-Photoroom",
+    "coal-Photoroom",
+  ],
+  dashboard: ["pc-Photoroom"],
 };
 
 export const Presentation = () => {
@@ -26,18 +31,23 @@ export const Presentation = () => {
   const router = useRouter();
   const ref = useRef(null);
   const [section, setsection] = useState("");
+  const [isscroll, setisscroll] = useState(false);
   const t = useTranslations();
   useEffect(() => {
     const param = params.get("view");
+    const scroll = params.get("scroll");
     if (param) {
       setsection(param);
     } else {
-      router.push(`?view=invoice`, { scroll: false });
+      router.push(`?view=invoice`);
+    }
+    if (scroll) {
+      setisscroll(scroll === "1");
     }
   }, [params]);
   useEffect(() => {
-    if (section && ref.current) {
-      (ref.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    if (section && isscroll && ref.current) {
+      (ref.current as HTMLElement).scrollIntoView();
     }
   }, [section]);
   return (
@@ -46,28 +56,34 @@ export const Presentation = () => {
         <Flex
           align={"center"}
           position={"absolute"}
-          style={{ transform: "translate(60px, -90px)" }}
+          style={{ transform: "translate(60px, -140px)" }}
           gap={"3"}
         >
-          <Image
-            alt="huge-cargo"
+          {
             //@ts-expect-error
-            src={`/${imgpath[section]}.png`}
-            width={58}
-            height={58}
-          />
+            imgpath[section]?.map((path) => {
+              return (
+                <Image
+                  key={path}
+                  alt="huge-cargo"
+                  src={`/${path}.png`}
+                  width={58}
+                  height={58}
+                  style={{ marginLeft: "-40px" }}
+                />
+              );
+            })
+          }
           <Box className="elevated-card">
             <Heading mb="2" size={"1"} weight={"bold"}>
               {t("title_contact_us")}
             </Heading>
-            <Button variant="ghost">
-              <CopyIcon /> info@smartmachines.pro
-            </Button>
+            <Contacts />
           </Box>
         </Flex>
         <SegmentedControl.Root
           onValueChange={(value) => {
-            router.push(`?view=${value}`, { scroll: false });
+            router.push(`?view=${value}&scroll=1`);
           }}
           value={section}
         >

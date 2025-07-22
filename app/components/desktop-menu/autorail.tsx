@@ -7,12 +7,14 @@ import { useTranslations } from "next-intl";
 export const Autorail = () => {
   const t = useTranslations();
   return (
-    <Grid width={"550px"} gapX={"6"} pt="6" columns={"2"} p="4">
+    <Grid width={"660px"} gapX={"6"} pt="6" columns={"2"} p="4">
       <Box>
-        <Heading size={"1"} weight={"bold"}>
-          {t("title_auto")}
-        </Heading>
-        <Grid mt="4" gapX={"2"} columns={"40px 200px"} align={"center"}>
+        <Link href="/auto?scroll=0">
+          <Heading size={"1"} weight={"bold"}>
+            {t("title_auto")}
+          </Heading>
+        </Link>
+        <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
           <Box>
             <Image
               alt="small-cargo"
@@ -21,8 +23,8 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href="/auto?view=mile">
-            <Heading size={"2"} weight={"medium"}>
+          <Link href="/auto?view=mile&scroll=1">
+            <Heading size={"2"} weight={"regular"}>
               {t("miles")}
             </Heading>
           </Link>
@@ -35,8 +37,8 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href="/auto?view=highway">
-            <Heading size={"2"} weight={"medium"}>
+          <Link href="/auto?view=highway&scroll=1">
+            <Heading size={"2"} weight={"regular"}>
               {t("highway")}
             </Heading>
           </Link>
@@ -48,18 +50,20 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href="/auto?view=store">
-            <Heading size={"2"} weight={"medium"}>
+          <Link href="/auto?view=store&scroll=1">
+            <Heading size={"2"} weight={"regular"}>
               {t("store")}
             </Heading>
           </Link>
         </Grid>
       </Box>
       <Box>
-        <Heading size={"1"} weight={"bold"}>
-          {t("title_rail")}
-        </Heading>
-        <Grid mt="4" gapX={"2"} columns={"40px 200px"} align={"center"}>
+        <Link href="/rail?scroll=0">
+          <Heading size={"1"} weight={"bold"}>
+            {t("title_rail")}
+          </Heading>
+        </Link>
+        <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
           <Box>
             <Image
               alt="small-cargo"
@@ -68,8 +72,8 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href={"/rail?view=invoice"}>
-            <Heading size={"2"} weight={"medium"}>
+          <Link href={"/rail?view=invoice&scroll=1"}>
+            <Heading size={"2"} weight={"regular"}>
               {t("invoice")}
             </Heading>
           </Link>
@@ -81,8 +85,8 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href={"/rail?view=dashboard"}>
-            <Heading size={"2"} weight={"medium"}>
+          <Link href={"/rail?view=dashboard&scroll=1"}>
+            <Heading size={"2"} weight={"regular"}>
               {t("dashboard")}
             </Heading>
           </Link>

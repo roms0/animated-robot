@@ -15,13 +15,7 @@ export const MileFeatures = () => {
       gap={"4"}
     >
       <Box className="elevated-card">
-        <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param min time")}</Box>
-          <Box className="parameter-box">{t("param min cost")}</Box>
-          <Box className="parameter-box">{t("param cargo per point")}</Box>
-          <Box className="parameter-box">{t("param time slots")}</Box>
-        </Flex>
-        <Flex mt="5" align={"center"} gap={"2"}>
+        <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
             height={60}
@@ -32,6 +26,12 @@ export const MileFeatures = () => {
             <span className="farfetch">{t("feature routing title")}.</span>{" "}
             {t("feature routing desc")}.
           </Text>
+        </Flex>
+        <Flex mt="5" gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param min time")}</Box>
+          <Box className="parameter-box">{t("param min cost")}</Box>
+          <Box className="parameter-box">{t("param cargo per point")}</Box>
+          <Box className="parameter-box">{t("param time slots")}</Box>
         </Flex>
       </Box>
       <Flex
@@ -50,11 +50,7 @@ export const MileFeatures = () => {
         >
           {t("title_name")}
         </Badge>
-        <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param vertical only")}</Box>
-          <Box className="parameter-box">{t("param delivery priority")}</Box>
-          <Box className="parameter-box">{t("param dont stack")}</Box>
-        </Flex>
+
         <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
@@ -90,6 +86,11 @@ export const MileFeatures = () => {
             <span className="farfetch">{t("feature alter title")}.</span>{" "}
             {t("feature alter desc")}.
           </Text>
+        </Flex>
+        <Flex gap={"1"} wrap={"wrap"}>
+          <Box className="parameter-box">{t("param vertical only")}</Box>
+          <Box className="parameter-box">{t("param delivery priority")}</Box>
+          <Box className="parameter-box">{t("param dont stack")}</Box>
         </Flex>
       </Flex>
     </Grid>

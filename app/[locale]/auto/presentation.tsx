@@ -17,6 +17,7 @@ import { HighwayFeatures } from "./highway-features";
 import Image from "next/image";
 import { CopyIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
+import { Contacts } from "@/app/components/contacts/contacts";
 
 const imgpath = {
   store: "store-Photoroom",
@@ -29,18 +30,24 @@ export const Presentation = () => {
   const router = useRouter();
   const ref = useRef(null);
   const [section, setsection] = useState("");
+  const [isscroll, setisscroll] = useState(false);
   const t = useTranslations();
+
   useEffect(() => {
     const param = params.get("view");
+    const scroll = params.get("scroll");
     if (param) {
       setsection(param);
     } else {
-      router.push(`?view=mile`, { scroll: false });
+      router.push(`?view=mile`);
+    }
+    if (scroll) {
+      setisscroll(scroll === "1");
     }
   }, [params]);
   useEffect(() => {
-    if (section && ref.current) {
-      (ref.current as HTMLElement).scrollIntoView({ behavior: "smooth" });
+    if (section && isscroll && ref.current) {
+      (ref.current as HTMLElement).scrollIntoView();
     }
   }, [section]);
   return (
@@ -49,7 +56,7 @@ export const Presentation = () => {
         <Flex
           align={"center"}
           position={"absolute"}
-          style={{ transform: "translate(60px, -90px)" }}
+          style={{ transform: "translate(60px, -140px)" }}
           gap={"3"}
         >
           <Image
@@ -63,14 +70,13 @@ export const Presentation = () => {
             <Heading mb="2" size={"1"} weight={"bold"}>
               {t("title_contact_us")}
             </Heading>
-            <Button variant="ghost">
-              <CopyIcon /> info@smartmachines.pro
-            </Button>
+            <Contacts />
           </Box>
         </Flex>
         <SegmentedControl.Root
           onValueChange={(value) => {
-            router.push(`?view=${value}`, { scroll: false });
+            router.push(`?view=${value}&scroll=1`);
+            sessionStorage.setItem("y", window.pageYOffset.toString());
           }}
           value={section}
         >

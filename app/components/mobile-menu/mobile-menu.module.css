@@ -1,24 +1,46 @@
 .menu {
-    position: sticky;
-    bottom: 0px;
-    height: 38vh;
+    position: fixed;
     width: 100vw;
-    transform: translateY(30vh);
+    height: 40px;
+    bottom: 0;
+    overflow: visible;
+}
+
+/* .bd {
+    backdrop-filter: blur(40px);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+} */
+
+.indicator {
+    position: absolute;
+    right: 10px;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 50vh;
+    transition: transform 0.2s;
+    transform: translateY(50vh);
+    transform-origin: top;
     background-color: var(--color-panel-solid);
-    box-shadow: var(--custom-shadow);
-    border-radius: var(--radius-4) var(--radius-4) 0 0;
-    transition: transform 0.2s ease; 
-    .indicator {
-        transition: transform 0.4s ease; 
+    border-radius: var(--radius-3);
+}
+
+.content--open {
+    transform: translateY(0vh);
+}
+
+@media (min-width: 1024px) {
+    .menu {
+        display: none;
     }
 }
 
-.menu-seen {
-    transform: translateY(0vh);
-    .indicator {
-        transform: rotate(180deg);
-    }
-}
 
 .link {
     all: unset;

@@ -6,7 +6,7 @@ export const ProductFeatured = async () => {
   const t = await getTranslations();
   return (
     <Flex wrap={"wrap"} justify={"center"} gap="5" align={"center"}>
-      <Box>
+      <Box display={{ initial: "none", md: "block" }}>
         <Heading weight={"regular"} color="gray" size="2">
           {t("text_partners")}
         </Heading>

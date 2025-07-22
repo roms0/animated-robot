@@ -6,9 +6,13 @@
   margin: 0;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 html {
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 a {

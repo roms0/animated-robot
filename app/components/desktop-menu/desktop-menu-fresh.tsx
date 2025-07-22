@@ -31,6 +31,7 @@ import Link from "next/link";
 import { Attachments } from "./attachments";
 import { Language } from "./language";
 import { getLocale, getTranslations } from "next-intl/server";
+import { Logo } from "./product-logo";
 
 export const DesktopMenu = async () => {
   const locale = getLocale();
@@ -41,12 +42,14 @@ export const DesktopMenu = async () => {
         <NavigationMenu.Item>
           <Flex align={"center"} gap={"4"} mr="6" mt="2" ml="4">
             <Link href={"/"}>
-              <Image alt="logo" width={14} height={16} src="/logo.jpg" />
+              <Box width={"20px"} height={"20px"}>
+                <Logo />
+              </Box>
             </Link>
           </Flex>
         </NavigationMenu.Item>
 
-        <Flex align={"center"} ml="6" mr="6">
+        <Flex align={"center"} ml="9" mr="9">
           <NavigationMenu.Item>
             <NavigationMenu.Trigger className={styles.Trigger}>
               <Text>{t("link_solutions")}</Text>{" "}
@@ -76,7 +79,7 @@ export const DesktopMenu = async () => {
               <Badge color="gray" variant="surface">
                 {t("text_demo")}
               </Badge>{" "}
-              <Text>{t("text_last_mile")}</Text>
+              <Text size={"1"}>{t("text_last_mile")}</Text>
               <ExternalLinkIcon />
             </Flex>
           </NavigationMenu.Link>

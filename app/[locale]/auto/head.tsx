@@ -37,7 +37,7 @@ export const Head = async () => {
   const t = await getTranslations();
   const locale = await getLocale();
   return (
-    <Section id="index" pt="15vh">
+    <Section id="index" pt={{ initial: "8vh", md: "15vh" }}>
       <Box maxWidth={"500px"} m="auto">
         <Heading align={"center"}>{t("title_auto_hero")}</Heading>
         {locale === "en" ? <EnglishHero /> : <RussianHero />}
