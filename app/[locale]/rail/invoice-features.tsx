@@ -2,6 +2,26 @@ import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+const invoice = [
+  "param max revenue",
+  "param fleet type",
+  "param fleet pos",
+  "param idle cost",
+  "param idle capacity",
+  "param fleet state",
+  "param dispatches",
+  "param fleet speed",
+  "param load unload idle time",
+];
+
+const invoiceplus = [
+  "param debit rate",
+  "param approachment",
+  "param payment rank",
+  "param task size",
+  "param dispatch fullfillment",
+];
+
 export const InvoiceFeatures = () => {
   const t = useTranslations();
   return (
@@ -22,9 +42,13 @@ export const InvoiceFeatures = () => {
           </Text>
         </Flex>
         <Flex mt="5" gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param tarif")}</Box>
-          <Box className="parameter-box">{t("param dispatches")}</Box>
-          <Box className="parameter-box">{t("param cargo type")}</Box>
+          {invoice.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Box>
       <Flex
@@ -82,11 +106,13 @@ export const InvoiceFeatures = () => {
           </Text>
         </Flex>
         <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param dispatch density")}</Box>
-          <Box className="parameter-box">{t("param arrival density")}</Box>
-          <Box className="parameter-box">{t("param owner rank")}</Box>
-          <Box className="parameter-box">{t("param cargo wait time")}</Box>
-          <Box className="parameter-box">{t("param issue schedule")}</Box>
+          {invoiceplus.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Flex>
     </Grid>

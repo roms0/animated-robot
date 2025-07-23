@@ -2,6 +2,26 @@ import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+const high = [
+  "param vehicle type",
+  "param store worktime",
+  "param leg count",
+  "param trip range",
+  "param toll roads",
+  "param reverse cargo",
+  "param unload time",
+  "param warehouse space capacity",
+];
+
+const highplus = [
+  "param gas cards",
+  "param gas seasons",
+  "param gas type",
+  "param gas price",
+  "param trip frequency",
+  "param stops gap",
+];
+
 export const HighwayFeatures = () => {
   const t = useTranslations();
   return (
@@ -27,8 +47,13 @@ export const HighwayFeatures = () => {
           </Text>
         </Flex>
         <Flex mt="5" gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param store worktime")}</Box>
-          <Box className="parameter-box">{t("param vehicle load")}</Box>
+          {high.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Box>
       <Flex
@@ -79,10 +104,13 @@ export const HighwayFeatures = () => {
           </Text>
         </Flex>
         <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param vehicle type")}</Box>
-          <Box className="parameter-box">{t("param trip frequency")}</Box>
-          <Box className="parameter-box">{t("param vertical only")}</Box>
-          <Box className="parameter-box">{t("param dont stack")}</Box>
+          {highplus.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Flex>
     </Grid>

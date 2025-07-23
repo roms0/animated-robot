@@ -2,6 +2,13 @@ import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+const store = [
+  "param points per cluster",
+  "param range form cluster",
+  "param gates count",
+  "param time slots",
+];
+
 export const StoreFeatures = () => {
   const t = useTranslations();
   return (
@@ -44,9 +51,13 @@ export const StoreFeatures = () => {
           </Text>
         </Flex>
         <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param points per cluster")}</Box>
-          <Box className="parameter-box">{t("param range form cluster")}</Box>
-          <Box className="parameter-box">{t("param cargo load per point")}</Box>
+          {store.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Flex>
     </Grid>

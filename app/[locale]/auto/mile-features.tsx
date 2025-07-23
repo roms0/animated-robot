@@ -3,6 +3,24 @@ import { Badge, Box, Flex, Grid, Section, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+const routing = [
+  "param min time",
+  "param min cost",
+  "param time slots",
+  "param vehicle space capacity",
+  "param vehicle mass capacity",
+  "param trip duration",
+  "param unload time",
+];
+
+const routingplus = [
+  "param vertical only",
+  "param dont stack",
+  "param delivery priority",
+  "param dimensions",
+  "param trip frequency",
+];
+
 export const MileFeatures = () => {
   const t = useTranslations();
   return (
@@ -28,10 +46,13 @@ export const MileFeatures = () => {
           </Text>
         </Flex>
         <Flex mt="5" gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param min time")}</Box>
-          <Box className="parameter-box">{t("param min cost")}</Box>
-          <Box className="parameter-box">{t("param cargo per point")}</Box>
-          <Box className="parameter-box">{t("param time slots")}</Box>
+          {routing.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Box>
       <Flex
@@ -88,9 +109,13 @@ export const MileFeatures = () => {
           </Text>
         </Flex>
         <Flex gap={"1"} wrap={"wrap"}>
-          <Box className="parameter-box">{t("param vertical only")}</Box>
-          <Box className="parameter-box">{t("param delivery priority")}</Box>
-          <Box className="parameter-box">{t("param dont stack")}</Box>
+          {routingplus.map((par) => {
+            return (
+              <Box key={par} className="parameter-box">
+                {t(par)}
+              </Box>
+            );
+          })}
         </Flex>
       </Flex>
     </Grid>
