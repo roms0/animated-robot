@@ -13,9 +13,6 @@ export default function Railroads() {
           <ProductFeatured />
         </Section>
         <Presentation />
-        {/* <Box display={{ initial: "block", md: "none" }}>
-          <MobilePresentation />
-        </Box> */}
       </Container>
     </>
   );

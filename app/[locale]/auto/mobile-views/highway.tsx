@@ -1,6 +1,26 @@
-import { Flex, Text } from "@radix-ui/themes";
+import { Box, Flex, Text } from "@radix-ui/themes";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+
+const high = [
+  "param vehicle type",
+  "param store worktime",
+  "param leg count",
+  "param trip range",
+  "param toll roads",
+  "param reverse cargo",
+  "param unload time",
+  "param warehouse space capacity",
+];
+
+const highplus = [
+  "param gas cards",
+  "param gas seasons",
+  "param gas type",
+  "param gas price",
+  "param trip frequency",
+  "param stops gap",
+];
 
 export const Highway = () => {
   const t = useTranslations();
@@ -43,6 +63,22 @@ export const Highway = () => {
           <span className="farfetch">{t("feature fragile title")}</span>{" "}
           {t("feature fragile desc")}.
         </Text>
+      </Flex>
+      <Flex gap={"1"} wrap={"wrap"}>
+        {high.map((par) => {
+          return (
+            <Box key={par} className="parameter-box">
+              {t(par)}
+            </Box>
+          );
+        })}
+        {highplus.map((par) => {
+          return (
+            <Box key={par} className="parameter-box">
+              {t(par)}
+            </Box>
+          );
+        })}
       </Flex>
     </Flex>
   );

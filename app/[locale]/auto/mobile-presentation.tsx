@@ -13,7 +13,7 @@ interface PresentationProps {
 
 export const MobilePresentation = ({ section }: PresentationProps) => {
   return (
-    <Section pt="15vh" pb="15vh">
+    <Section pt="6vh" pb="15vh">
       {section === "mile" && <Mile />}
       {section === "highway" && <Highway />}
       {section === "store" && <Store />}

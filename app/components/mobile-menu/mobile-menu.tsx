@@ -1,8 +1,15 @@
 "use client";
 
-import { Badge, Box, Flex, Grid, Heading } from "@radix-ui/themes";
+import {
+  Badge,
+  Box,
+  ChevronDownIcon,
+  Flex,
+  Grid,
+  Heading,
+} from "@radix-ui/themes";
 import classes from "./mobile-menu.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { useMenuStore } from "@/app/components/store/menu";
 import { HamburgerMenuIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
@@ -43,20 +50,23 @@ export const MobileMenu = () => {
     <>
       <Box className={`${classes.menu} ${isOpen && classes["menu-seen"]}`}>
         <Box
-          className={`${classes.content} ${isOpen && classes["content--open"]}`}
+          className={`${classes.container} ${
+            isOpen && classes["container--open"]
+          }`}
         >
-          <Flex justify={"center"}>
+          <Flex justify={"center"} mb="5">
             <Language />
           </Flex>
 
           <Accordion.Root type="single" defaultValue="item-1" collapsible>
             <Accordion.Item value="item-1">
-              <Accordion.Trigger>
+              <Accordion.Trigger className={classes.Trigger}>
                 <Heading size={"1"} weight={"bold"}>
                   {t("title_auto")}
                 </Heading>
+                <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
-              <Accordion.Content>
+              <Accordion.Content className={classes.Content}>
                 <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
                   <Box>
                     <Image
@@ -102,12 +112,13 @@ export const MobileMenu = () => {
               </Accordion.Content>
             </Accordion.Item>
             <Accordion.Item value="item-2">
-              <Accordion.Trigger>
+              <Accordion.Trigger className={classes.Trigger}>
                 <Heading size={"1"} weight={"bold"}>
                   {t("title_rail")}
                 </Heading>
+                <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
-              <Accordion.Content>
+              <Accordion.Content className={classes.Content}>
                 <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
                   <Box>
                     <Image
@@ -139,12 +150,13 @@ export const MobileMenu = () => {
               </Accordion.Content>
             </Accordion.Item>
             <Accordion.Item value="item-3">
-              <Accordion.Trigger>
+              <Accordion.Trigger className={classes.Trigger}>
                 <Heading size={"1"} weight={"bold"}>
                   {t("link_materials")}
                 </Heading>
+                <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
-              <Accordion.Content>
+              <Accordion.Content className={classes.Content}>
                 <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
                   <Box>
                     <Image

@@ -6,6 +6,6 @@ interface MenuState {
 }
 
 export const useMenuStore = create<MenuState>((set) => ({
-  isOpen: true,
+  isOpen: false,
   toggle: () => set((state) => ({ isOpen: !state.isOpen })),
 }));
