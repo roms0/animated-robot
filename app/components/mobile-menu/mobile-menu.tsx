@@ -9,46 +9,31 @@ import {
   Heading,
 } from "@radix-ui/themes";
 import classes from "./mobile-menu.module.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useMenuStore } from "@/app/components/store/menu";
-import { HamburgerMenuIcon, SunIcon } from "@radix-ui/react-icons";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Accordion } from "radix-ui";
 import Image from "next/image";
 import Link from "next/link";
 import { Language } from "../desktop-menu/language";
-import { useMediaQuery } from "react-responsive";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Logo } from "../product-logo";
-import { Contacts } from "../contacts/contacts";
 
-const parsing = {
-  "": { title: "Путь.Про", path: "/", color: "gray" },
-  auto: { title: "авто", path: "/auto#index", color: "plum" },
-  rail: { title: "жд", path: "/rail#index", color: "pink" },
+const materials = {
+  en: [
+    { name: "way.pro auto", path: "/en/way_pro_auto.pdf" },
+    { name: "way.pro auto docs", path: "/en/way_pro_auto_docs.pdf" },
+  ],
+  ru: [
+    { name: "путь.про авто", path: "/ru/way_pro_auto_ru.pdf" },
+    { name: "путь.про жд", path: "/ru/way_pro_rail_ru.pdf" },
+  ],
 } as const;
-
-const BreadCrumbs = ({ chunks }: { chunks: string[] }) => {
-  return (
-    <>
-      {chunks.map((chunk, i) => {
-        if (i > 0 && chunk == "") return null;
-        return (
-          <React.Fragment key={chunk}>
-            {i > 0 && <code>{` `}</code>}
-            <Badge color={parsing[chunk as keyof typeof parsing].color}>
-              {parsing[chunk as keyof typeof parsing].title}
-            </Badge>
-          </React.Fragment>
-        );
-      })}
-    </>
-  );
-};
 
 export const MobileMenu = () => {
   const { isOpen, toggle } = useMenuStore();
   const params = useSearchParams();
+  const locale = useLocale();
   const t = useTranslations();
   return (
     <>
@@ -59,7 +44,7 @@ export const MobileMenu = () => {
           }`}
         >
           <Language />
-          <Accordion.Root type="single" defaultValue="item-1" collapsible>
+          <Accordion.Root type="single" collapsible>
             <Accordion.Item value="item-1">
               <Accordion.Trigger className={classes.Trigger}>
                 <Heading size={"4"} weight={"bold"}>
@@ -180,40 +165,29 @@ export const MobileMenu = () => {
               </Accordion.Trigger>
               <Accordion.Content className={classes.Content}>
                 <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
-                  <Box>
-                    <Image
-                      alt="small-cargo"
-                      src={"/pdf-icon.png"}
-                      width={38}
-                      height={38}
-                    />
-                  </Box>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={"/smart machines auto.pdf"}
-                  >
-                    <Heading size={"2"} weight={"medium"}>
-                      {t("text_presentation")}
-                    </Heading>
-                  </Link>
-                  <Box>
-                    <Image
-                      alt="small-cargo"
-                      src={"/pdf-icon.png"}
-                      width={38}
-                      height={38}
-                    />
-                  </Box>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={"/smart machines auto.pdf"}
-                  >
-                    <Heading size={"2"} weight={"medium"}>
-                      {t("text_presentation")}
-                    </Heading>
-                  </Link>
+                  {materials[locale as "ru" | "en"].map((m) => {
+                    return (
+                      <React.Fragment key={m.name}>
+                        <Box>
+                          <Image
+                            alt="small-cargo"
+                            src={"/pdf-icon.png"}
+                            width={38}
+                            height={38}
+                          />
+                        </Box>
+                        <Link
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={m.path}
+                        >
+                          <Heading size={"2"} weight={"medium"}>
+                            {m.name}
+                          </Heading>
+                        </Link>
+                      </React.Fragment>
+                    );
+                  })}
                 </Grid>
               </Accordion.Content>
             </Accordion.Item>

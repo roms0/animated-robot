@@ -127,7 +127,7 @@
   "feature metrics desc": "Performance evaluation of fleet operations",
 
   "up to": "up to",
-  "metric wait time": "Reduced Goods Waiting Time",
-  "metric fuel cost": "Lower Fuel Costs",
-  "metric utilization": "Increased Fleet Turnover"
+  "metric wait time": "cost reduction",
+  "metric fuel cost": "fuel cost reduction",
+  "metric utilization": "increased transport profitability"
 }
