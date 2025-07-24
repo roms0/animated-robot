@@ -1,13 +1,34 @@
 "use client";
-import { Heading, SegmentedControl } from "@radix-ui/themes";
+import { Heading, SegmentedControl, Skeleton } from "@radix-ui/themes";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+
+function isWindowsPlatform() {
+  //@ts-ignore
+  if (navigator?.userAgentData && navigator?.userAgentData?.platform) {
+    //@ts-ignore
+    return navigator.userAgentData.platform === "Windows";
+  }
+  if ("platform" in navigator) {
+    return navigator.platform === "Win32";
+  }
+  return true;
+}
+const eng = isWindowsPlatform() ? "eng" : `🇺🇸`;
+const rus = isWindowsPlatform() ? "rus" : `🇷🇺`;
 
 export const Language = () => {
   const locale = useLocale();
   const router = useRouter();
   const path = usePathname();
   const params = useSearchParams();
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleChangeLocale = (locale: string) => {
     // Убираем текущую локаль из pathname и добавляем новую
@@ -17,6 +38,8 @@ export const Language = () => {
 
     router.replace(newPath + `?${params.toString()}`);
   };
+  if (!isClient)
+    return <Skeleton ml="6" mt="1" mr="2" width={"100px"} height={"30px"} />;
   return (
     <SegmentedControl.Root
       onValueChange={handleChangeLocale}
@@ -26,10 +49,10 @@ export const Language = () => {
       value={locale}
     >
       <SegmentedControl.Item value="ru">
-        <Heading size={"4"}>🇷🇺</Heading>
+        <Heading size={"4"}>{eng}</Heading>
       </SegmentedControl.Item>
       <SegmentedControl.Item value="en">
-        <Heading size={"4"}>🇺🇸</Heading>
+        <Heading size={"4"}>{rus}</Heading>
       </SegmentedControl.Item>
     </SegmentedControl.Root>
   );
