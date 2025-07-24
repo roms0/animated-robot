@@ -4,8 +4,8 @@ import { Box, Reset, Theme } from "@radix-ui/themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Golos_Text } from "next/font/google";
 import { ThemeProvider } from "next-themes";
-import { MobileMenu } from "../components/mobile-menu/mobile-menu";
 import { DesktopMenu } from "../components/desktop-menu/desktop-menu-fresh";
+import { MobileMenu } from "../components/mobile-menu/mobile-menu";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],

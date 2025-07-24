@@ -31,7 +31,7 @@ import Link from "next/link";
 import { Attachments } from "./attachments";
 import { Language } from "./language";
 import { getLocale, getTranslations } from "next-intl/server";
-import { Logo } from "./product-logo";
+import { Logo } from "../product-logo";
 
 export const DesktopMenu = async () => {
   const locale = getLocale();

@@ -7,8 +7,13 @@
 }
 
 .indicator {
-    position: absolute;
-    right: 10px;
+     position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--color-panel-solid);
+    box-shadow: var(--custom-shadow);
+    padding: var(--space-1);
+    border-radius: var(--radius-3);
 }
 
 .container {
@@ -63,10 +68,10 @@
 .Content {
 	overflow: hidden;
 	&[data-state="open"] {
-		animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+		animation: slideDown 400ms cubic-bezier(0.87, 0, 0.13, 1);
 	}
 	&[data-state="closed"] {
-		animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+		animation: slideUp 400ms cubic-bezier(0.87, 0, 0.13, 1);
 	}
 }
 
@@ -86,4 +91,12 @@
 	to {
 		height: 0;
 	}
+}
+
+.pic {
+    transition: 0.3s transform ease;
+    transform: translateX(0);
+}
+.pic--active {
+    transform: translateX(8px);
 }

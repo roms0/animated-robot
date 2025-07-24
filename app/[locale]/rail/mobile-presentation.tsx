@@ -1,6 +1,6 @@
 "use client";
 
-import { Section } from "@radix-ui/themes";
+import { Box, Section } from "@radix-ui/themes";
 import React from "react";
 import { Invoice } from "./mobile-views/invoice";
 import { Dashboard } from "./mobile-views/dashboard";
@@ -13,7 +13,10 @@ interface PresentationProps {
 
 export const MobilePresentation = ({ section }: PresentationProps) => {
   return (
-    <Section pt="6vh" pb="15vh">
+    <Section pt="0" pb="15vh">
+      <Box mb="8">
+        <Contacts />
+      </Box>
       {section === "invoice" && <Invoice />}
       {section === "dashboard" && <Dashboard />}
     </Section>
