@@ -1,5 +1,5 @@
 "use client";
-import { Heading, SegmentedControl, Skeleton } from "@radix-ui/themes";
+import { Heading, SegmentedControl, Skeleton, Text } from "@radix-ui/themes";
 import { useLocale } from "next-intl";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -49,10 +49,10 @@ export const Language = () => {
       value={locale}
     >
       <SegmentedControl.Item value="ru">
-        <Heading size={"4"}>{eng}</Heading>
+        <Text>{rus}</Text>
       </SegmentedControl.Item>
       <SegmentedControl.Item value="en">
-        <Heading size={"4"}>{rus}</Heading>
+        <Text>{eng}</Text>
       </SegmentedControl.Item>
     </SegmentedControl.Root>
   );
