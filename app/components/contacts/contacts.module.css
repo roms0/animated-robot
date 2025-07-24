@@ -1,0 +1,36 @@
+.success {
+    animation: success-feedback 0.5s linear;
+    animation-iteration-count: 1;
+}
+
+.failure {
+    animation: failure-feedback 0.5s linear;
+    animation-iteration-count: 2;
+}
+
+@keyframes failure-feedback {
+    from {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes success-feedback {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

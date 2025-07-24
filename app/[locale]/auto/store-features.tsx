@@ -50,7 +50,7 @@ export const StoreFeatures = () => {
             {t("feature zone desc")}.
           </Text>
         </Flex>
-        <Flex gap={"1"} wrap={"wrap"}>
+        <Flex gap={"1"} mt="auto" wrap={"wrap"}>
           {store.map((par) => {
             return (
               <Box key={par} className="parameter-box">

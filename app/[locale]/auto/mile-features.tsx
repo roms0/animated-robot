@@ -32,7 +32,13 @@ export const MileFeatures = () => {
       height={"100%"}
       gap={"4"}
     >
-      <Box className="elevated-card">
+      <Flex
+        className="elevated-card"
+        gap="5"
+        direction={"column"}
+        position={"relative"}
+        p="2"
+      >
         <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
@@ -45,7 +51,7 @@ export const MileFeatures = () => {
             {t("feature routing desc")}.
           </Text>
         </Flex>
-        <Flex mt="5" gap={"1"} wrap={"wrap"}>
+        <Flex mt="auto" gap={"1"} wrap={"wrap"}>
           {routing.map((par) => {
             return (
               <Box key={par} className="parameter-box">
@@ -54,7 +60,7 @@ export const MileFeatures = () => {
             );
           })}
         </Flex>
-      </Box>
+      </Flex>
       <Flex
         gap="5"
         direction={"column"}
@@ -108,7 +114,7 @@ export const MileFeatures = () => {
             {t("feature alter desc")}.
           </Text>
         </Flex>
-        <Flex gap={"1"} wrap={"wrap"}>
+        <Flex gap={"1"} mt="auto" wrap={"wrap"}>
           {routingplus.map((par) => {
             return (
               <Box key={par} className="parameter-box">

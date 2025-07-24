@@ -33,7 +33,13 @@ export const HighwayFeatures = () => {
       height={"100%"}
       gap={"4"}
     >
-      <Box className="elevated-card">
+      <Flex
+        className="elevated-card"
+        gap="5"
+        direction={"column"}
+        position={"relative"}
+        p="2"
+      >
         <Flex align={"center"} gap={"2"}>
           <Image
             width={60}
@@ -46,7 +52,7 @@ export const HighwayFeatures = () => {
             {t("feature highway desc")}.
           </Text>
         </Flex>
-        <Flex mt="5" gap={"1"} wrap={"wrap"}>
+        <Flex mt="auto" gap={"1"} wrap={"wrap"}>
           {high.map((par) => {
             return (
               <Box key={par} className="parameter-box">
@@ -55,7 +61,7 @@ export const HighwayFeatures = () => {
             );
           })}
         </Flex>
-      </Box>
+      </Flex>
       <Flex
         gap="5"
         direction={"column"}
@@ -103,7 +109,7 @@ export const HighwayFeatures = () => {
             {t("feature fragile desc")}.
           </Text>
         </Flex>
-        <Flex gap={"1"} wrap={"wrap"}>
+        <Flex mt="auto" gap={"1"} wrap={"wrap"}>
           {highplus.map((par) => {
             return (
               <Box key={par} className="parameter-box">

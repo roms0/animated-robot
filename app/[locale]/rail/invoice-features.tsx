@@ -33,7 +33,13 @@ export const InvoiceFeatures = () => {
       width={"900px"}
       gap={"4"}
     >
-      <Box className="elevated-card">
+      <Flex
+        className="elevated-card"
+        gap="5"
+        direction={"column"}
+        position={"relative"}
+        p="2"
+      >
         <Flex align={"center"} gap={"2"}>
           <Image width={60} height={60} alt="tree" src={"/features/tree.png"} />
           <Text size={"2"}>
@@ -41,7 +47,7 @@ export const InvoiceFeatures = () => {
             {t("feature schema desc")}.
           </Text>
         </Flex>
-        <Flex mt="5" gap={"1"} wrap={"wrap"}>
+        <Flex mt="auto" gap={"1"} wrap={"wrap"}>
           {invoice.map((par) => {
             return (
               <Box key={par} className="parameter-box">
@@ -50,7 +56,7 @@ export const InvoiceFeatures = () => {
             );
           })}
         </Flex>
-      </Box>
+      </Flex>
       <Flex
         gap="5"
         direction={"column"}
@@ -105,7 +111,7 @@ export const InvoiceFeatures = () => {
             {t("feature ranking desc")}.
           </Text>
         </Flex>
-        <Flex gap={"1"} wrap={"wrap"}>
+        <Flex gap={"1"} mt="auto" wrap={"wrap"}>
           {invoiceplus.map((par) => {
             return (
               <Box key={par} className="parameter-box">
