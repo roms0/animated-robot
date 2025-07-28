@@ -16,7 +16,7 @@ import { Accordion } from "radix-ui";
 import Image from "next/image";
 import Link from "next/link";
 import { Language } from "../desktop-menu/language";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Logo } from "../product-logo";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
@@ -34,9 +34,10 @@ const materials = {
 export const MobileMenu = () => {
   const { isOpen, toggle, close } = useMenuStore();
   const params = useSearchParams();
+  const pathname = usePathname();
   const locale = useLocale();
   const t = useTranslations();
-  useEffect(close, [params.get("view")]);
+  useEffect(close, [params.get("view"), pathname]);
   return (
     <>
       <Box className={`${classes.menu} ${isOpen && classes["menu-seen"]}`}>
@@ -45,16 +46,23 @@ export const MobileMenu = () => {
             isOpen && classes["container--open"]
           }`}
         >
+          <Box ml="2" mb="2">
+            <Link href="/">
+              <Heading size={"2"} weight={"medium"}>
+                Главная
+              </Heading>
+            </Link>
+          </Box>
           <Accordion.Root type="single" collapsible>
             <Accordion.Item value="item-1">
               <Accordion.Trigger className={classes.Trigger}>
-                <Heading size={"3"} weight={"medium"}>
+                <Heading size={"2"} weight={"medium"}>
                   {t("title_auto")}
                 </Heading>
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
               <Accordion.Content className={classes.Content}>
-                <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
+                <Grid gapX={"2"} columns={"40px 260px"} align={"center"}>
                   <Box
                     className={`${classes.pic}
                     }`}
@@ -62,8 +70,8 @@ export const MobileMenu = () => {
                     <Image
                       alt="small-cargo"
                       src={"/small-cargo-Photoroom.png"}
-                      width={38}
-                      height={38}
+                      width={28}
+                      height={28}
                     />
                   </Box>
                   <Link href="/auto?view=mile">
@@ -79,8 +87,8 @@ export const MobileMenu = () => {
                       style={{ transform: "rotate(-5deg)" }}
                       alt="huge-cargo"
                       src={"/huge-cargo-Photoroom.png"}
-                      width={38}
-                      height={38}
+                      width={28}
+                      height={28}
                     />
                   </Box>
                   <Link href="/auto?view=highway">
@@ -95,8 +103,8 @@ export const MobileMenu = () => {
                     <Image
                       alt="huge-cargo"
                       src={"/store-Photoroom.png"}
-                      width={38}
-                      height={38}
+                      width={28}
+                      height={28}
                     />
                   </Box>
                   <Link href="/auto?view=store">
@@ -109,19 +117,19 @@ export const MobileMenu = () => {
             </Accordion.Item>
             <Accordion.Item value="item-2">
               <Accordion.Trigger className={classes.Trigger}>
-                <Heading size={"3"} weight={"medium"}>
+                <Heading size={"2"} weight={"medium"}>
                   {t("title_rail")}
                 </Heading>
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
               <Accordion.Content className={classes.Content}>
-                <Grid mt="4" gapX={"3"} columns={"40px 260px"} align={"center"}>
+                <Grid gapX={"3"} columns={"40px 260px"} align={"center"}>
                   <Box className={classes.pic}>
                     <Image
                       alt="small-cargo"
                       src={"/closed-container-Photoroom.png"}
-                      width={38}
-                      height={38}
+                      width={28}
+                      height={28}
                     />
                   </Box>
                   <Link href={"/rail?view=invoice"}>
@@ -133,8 +141,8 @@ export const MobileMenu = () => {
                     <Image
                       alt="huge-cargo"
                       src={"/pc-Photoroom.png"}
-                      width={38}
-                      height={38}
+                      width={28}
+                      height={28}
                     />
                   </Box>
                   <Link href={"/rail?view=dashboard"}>
@@ -147,13 +155,13 @@ export const MobileMenu = () => {
             </Accordion.Item>
             <Accordion.Item value="item-3">
               <Accordion.Trigger className={classes.Trigger}>
-                <Heading size={"3"} weight={"medium"}>
+                <Heading size={"2"} weight={"medium"}>
                   {t("link_materials")}
                 </Heading>
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
               <Accordion.Content className={classes.Content}>
-                <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
+                <Grid gapX={"2"} columns={"40px 260px"} align={"center"}>
                   {materials[locale as "ru" | "en"].map((m) => {
                     return (
                       <React.Fragment key={m.name}>
@@ -161,8 +169,8 @@ export const MobileMenu = () => {
                           <Image
                             alt="small-cargo"
                             src={"/pdf-icon.png"}
-                            width={38}
-                            height={38}
+                            width={28}
+                            height={28}
                           />
                         </Box>
                         <Link

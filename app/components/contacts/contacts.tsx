@@ -13,7 +13,7 @@ const Copy = ({ content }: { content: string }) => {
   const handleCopy = async () => {
     clearTimeout(tm.current);
     try {
-      await Promise.resolve();
+      await navigator.clipboard.writeText(content);
       setState(1);
       tm.current = setTimeout(() => {
         setState(0);
