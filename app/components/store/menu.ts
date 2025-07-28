@@ -9,6 +9,7 @@ interface MenuState {
   toggle: () => void;
   section: Section;
   toggleSection: (section: Section) => void;
+  close: () => void;
 }
 
 const depths = {
@@ -22,6 +23,7 @@ const depths = {
 export const useMenuStore = create<MenuState>((set) => ({
   isOpen: false,
   toggle: () => set((state) => ({ isOpen: !state.isOpen })),
+  close: () => set(() => ({ isOpen: false })),
   section: "main",
   depth: 1,
   toggleSection: (section) => set(() => ({ section, depth: depths[section] })),

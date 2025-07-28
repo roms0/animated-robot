@@ -84,7 +84,9 @@ export const DesktopMenu = async () => {
             </Flex>
           </NavigationMenu.Link>
         </NavigationMenu.Item>
-        <Language />
+        <Box ml="6" mt="1" mr="2" value={locale}>
+          <Language />
+        </Box>
 
         <NavigationMenu.Indicator className={styles.Indicator}>
           <div className={styles.Arrow} />

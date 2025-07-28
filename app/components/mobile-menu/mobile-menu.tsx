@@ -9,7 +9,7 @@ import {
   Heading,
 } from "@radix-ui/themes";
 import classes from "./mobile-menu.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { useMenuStore } from "@/app/components/store/menu";
 import { useLocale, useTranslations } from "next-intl";
 import { Accordion } from "radix-ui";
@@ -18,6 +18,7 @@ import Link from "next/link";
 import { Language } from "../desktop-menu/language";
 import { useSearchParams } from "next/navigation";
 import { Logo } from "../product-logo";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const materials = {
   en: [
@@ -31,10 +32,11 @@ const materials = {
 } as const;
 
 export const MobileMenu = () => {
-  const { isOpen, toggle } = useMenuStore();
+  const { isOpen, toggle, close } = useMenuStore();
   const params = useSearchParams();
   const locale = useLocale();
   const t = useTranslations();
+  useEffect(close, [params.get("view")]);
   return (
     <>
       <Box className={`${classes.menu} ${isOpen && classes["menu-seen"]}`}>
@@ -43,11 +45,10 @@ export const MobileMenu = () => {
             isOpen && classes["container--open"]
           }`}
         >
-          <Language />
           <Accordion.Root type="single" collapsible>
             <Accordion.Item value="item-1">
               <Accordion.Trigger className={classes.Trigger}>
-                <Heading size={"4"} weight={"bold"}>
+                <Heading size={"3"} weight={"medium"}>
                   {t("title_auto")}
                 </Heading>
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
@@ -55,8 +56,7 @@ export const MobileMenu = () => {
               <Accordion.Content className={classes.Content}>
                 <Grid mt="4" gapX={"2"} columns={"40px 260px"} align={"center"}>
                   <Box
-                    className={`${classes.pic} ${
-                      params.get("view") === "mile" && classes["pic--active"]
+                    className={`${classes.pic}
                     }`}
                   >
                     <Image
@@ -72,8 +72,7 @@ export const MobileMenu = () => {
                     </Heading>
                   </Link>
                   <Box
-                    className={`${classes.pic} ${
-                      params.get("view") === "highway" && classes["pic--active"]
+                    className={`${classes.pic}
                     }`}
                   >
                     <Image
@@ -90,8 +89,7 @@ export const MobileMenu = () => {
                     </Heading>
                   </Link>
                   <Box
-                    className={`${classes.pic} ${
-                      params.get("view") === "store" && classes["pic--active"]
+                    className={`${classes.pic} 
                     }`}
                   >
                     <Image
@@ -111,18 +109,14 @@ export const MobileMenu = () => {
             </Accordion.Item>
             <Accordion.Item value="item-2">
               <Accordion.Trigger className={classes.Trigger}>
-                <Heading size={"4"} weight={"bold"}>
+                <Heading size={"3"} weight={"medium"}>
                   {t("title_rail")}
                 </Heading>
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
               <Accordion.Content className={classes.Content}>
                 <Grid mt="4" gapX={"3"} columns={"40px 260px"} align={"center"}>
-                  <Box
-                    className={`${classes.pic} ${
-                      params.get("view") === "invoice" && classes["pic--active"]
-                    }`}
-                  >
+                  <Box className={classes.pic}>
                     <Image
                       alt="small-cargo"
                       src={"/closed-container-Photoroom.png"}
@@ -135,12 +129,7 @@ export const MobileMenu = () => {
                       {t("invoice")}
                     </Heading>
                   </Link>
-                  <Box
-                    className={`${classes.pic} ${
-                      params.get("view") === "dashboard" &&
-                      classes["pic--active"]
-                    }`}
-                  >
+                  <Box className={`${classes.pic}`}>
                     <Image
                       alt="huge-cargo"
                       src={"/pc-Photoroom.png"}
@@ -158,7 +147,7 @@ export const MobileMenu = () => {
             </Accordion.Item>
             <Accordion.Item value="item-3">
               <Accordion.Trigger className={classes.Trigger}>
-                <Heading size={"4"} weight={"bold"}>
+                <Heading size={"3"} weight={"medium"}>
                   {t("link_materials")}
                 </Heading>
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
@@ -193,13 +182,16 @@ export const MobileMenu = () => {
             </Accordion.Item>
           </Accordion.Root>
         </Box>
+        <Box pl="2" pr="2" className={classes.language}>
+          <Language />
+        </Box>
         <Box
           onClick={toggle}
           className={classes.indicator}
           width={"42px"}
           height={"42px"}
         >
-          <Logo />
+          <HamburgerMenuIcon width={32} height={32} />
         </Box>
       </Box>
     </>

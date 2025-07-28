@@ -38,16 +38,9 @@ export const Language = () => {
 
     router.replace(newPath + `?${params.toString()}`);
   };
-  if (!isClient)
-    return <Skeleton ml="6" mt="1" mr="2" width={"100px"} height={"30px"} />;
+  if (!isClient) return <Skeleton width={"100px"} height={"30px"} />;
   return (
-    <SegmentedControl.Root
-      onValueChange={handleChangeLocale}
-      ml="6"
-      mt="1"
-      mr="2"
-      value={locale}
-    >
+    <SegmentedControl.Root onValueChange={handleChangeLocale} value={locale}>
       <SegmentedControl.Item value="ru">
         <Text>{rus}</Text>
       </SegmentedControl.Item>
