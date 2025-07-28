@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Badge,
-  Box,
-  ChevronDownIcon,
-  Flex,
-  Grid,
-  Heading,
-} from "@radix-ui/themes";
+import { Box, ChevronDownIcon, Grid, Heading } from "@radix-ui/themes";
 import classes from "./mobile-menu.module.css";
 import React, { useEffect } from "react";
 import { useMenuStore } from "@/app/components/store/menu";
@@ -17,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Language } from "../desktop-menu/language";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Logo } from "../product-logo";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const materials = {
@@ -49,7 +41,7 @@ export const MobileMenu = () => {
           <Box ml="2" mb="2">
             <Link href="/">
               <Heading size={"2"} weight={"medium"}>
-                Главная
+                {t("text_main")}
               </Heading>
             </Link>
           </Box>
