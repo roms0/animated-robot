@@ -17,12 +17,12 @@ const Copy = ({ content }: { content: string }) => {
       setState(1);
       tm.current = setTimeout(() => {
         setState(0);
-      }, 3000) as unknown as number;
+      }, 500) as unknown as number;
     } catch {
       setState(2);
       tm.current = setTimeout(() => {
         setState(0);
-      }, 3000) as unknown as number;
+      }, 500) as unknown as number;
     }
   };
   return (

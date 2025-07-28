@@ -1,10 +1,10 @@
 .success {
-    animation: success-feedback 0.5s linear;
+    animation: success-feedback linear 0.2s;
     animation-iteration-count: 1;
 }
 
 .failure {
-    animation: failure-feedback 0.5s linear;
+    animation: failure-feedback linear 0.2s;
     animation-iteration-count: 2;
 }
 
