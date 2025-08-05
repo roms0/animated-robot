@@ -32,6 +32,7 @@ import { Attachments } from "./attachments";
 import { Language } from "./language";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Logo } from "../product-logo";
+import { LogoLink } from "./logolink";
 
 export const DesktopMenu = async () => {
   const locale = getLocale();
@@ -41,11 +42,7 @@ export const DesktopMenu = async () => {
       <NavigationMenu.List className={styles.MenuList}>
         <NavigationMenu.Item>
           <Flex align={"center"} gap={"4"} mr="6" mt="2" ml="4">
-            <Link href={"/"}>
-              <Box width={"20px"} height={"20px"}>
-                <Logo />
-              </Box>
-            </Link>
+            <LogoLink />
           </Flex>
         </NavigationMenu.Item>
 

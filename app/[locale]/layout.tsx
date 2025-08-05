@@ -6,6 +6,7 @@ import { Golos_Text } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { DesktopMenu } from "../components/desktop-menu/desktop-menu-fresh";
 import { MobileMenu } from "../components/mobile-menu/mobile-menu";
+import { Analytics } from "@vercel/analytics/next";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],
@@ -42,6 +43,7 @@ export default async function RootLayout({
             </Theme>
           </ThemeProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
