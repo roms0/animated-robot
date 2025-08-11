@@ -20,6 +20,18 @@ const materials = {
   ru: [
     { name: "путь.про авто", path: "/ru/way_pro_auto_ru.pdf" },
     { name: "путь.про жд", path: "/ru/way_pro_rail_ru.pdf" },
+    {
+      name: "Инструкция по установке экземпляра ПО «Путь.Про» для эксперта",
+      path: "/ru/Инструкция_по_установке_экземпляра_ПО_«Путь_Про»_для_эксперта.pdf",
+    },
+    {
+      name: "Информация, необходимая для эксплуатации экземпляра «Путь.Про»",
+      path: "/ru/Информация,_необходимая_для_эксплуатации_экземпляра_ПО_«Путь_Про».pdf",
+    },
+    {
+      name: "Описание функциональных характеристик экземпляра ПО «Путь.Про»",
+      path: "/ru/Описание_функциональных_характеристик_экземпляра_ПО_«Путь_Про».pdf",
+    },
   ],
 } as const;
 
@@ -153,7 +165,12 @@ export const MobileMenu = () => {
                 <ChevronDownIcon className={classes.Chevron} aria-hidden />
               </Accordion.Trigger>
               <Accordion.Content className={classes.Content}>
-                <Grid gapX={"2"} columns={"40px 260px"} align={"center"}>
+                <Grid
+                  gapX="2"
+                  gapY={"1"}
+                  columns={"40px 260px"}
+                  align={"center"}
+                >
                   {materials[locale as "ru" | "en"].map((m) => {
                     return (
                       <React.Fragment key={m.name}>
@@ -170,7 +187,7 @@ export const MobileMenu = () => {
                           rel="noopener noreferrer"
                           href={m.path}
                         >
-                          <Heading size={"2"} weight={"medium"}>
+                          <Heading size={"1"} weight={"regular"}>
                             {m.name}
                           </Heading>
                         </Link>
