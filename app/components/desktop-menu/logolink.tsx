@@ -1,9 +1,9 @@
 "use client";
 
 import { Box } from "@radix-ui/themes";
-import Link from "next/link";
 import { Logo } from "../product-logo";
 import { useLocale } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export const LogoLink = () => {
   const locale = useLocale();
