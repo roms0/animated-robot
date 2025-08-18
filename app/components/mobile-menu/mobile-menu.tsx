@@ -16,6 +16,7 @@ const materials = {
   en: [
     { name: "way.pro auto", path: "/en/way_pro_auto.pdf" },
     { name: "way.pro auto docs", path: "/en/way_pro_auto_docs.pdf" },
+    { name: "way.pro rail", path: "/en/Way.Pro rail.pdf" },
   ],
   ru: [
     { name: "путь.про авто", path: "/ru/way_pro_auto_ru.pdf" },

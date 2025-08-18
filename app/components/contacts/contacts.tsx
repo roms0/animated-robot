@@ -47,7 +47,7 @@ export const Contacts = () => {
       width={"min-content"}
       gap={"2"}
     >
-      <Copy content="info@smartmachines.pro" />
+      <Copy content="support@smartmachines.pro" />
       <Copy content="+7 (977) 103-48-88" />
     </Flex>
   );
