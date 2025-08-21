@@ -1,9 +1,10 @@
 "use client";
 
 import { CheckIcon, CopyIcon } from "@radix-ui/react-icons";
-import { Button, Flex } from "@radix-ui/themes";
+import { Button, Flex, Text } from "@radix-ui/themes";
 import { useRef, useState } from "react";
 import classes from "./contacts.module.css";
+import { useTranslations } from "next-intl";
 
 const states = ["", classes.success, classes.failure];
 
@@ -39,14 +40,17 @@ const Copy = ({ content }: { content: string }) => {
 };
 
 export const Contacts = () => {
+  const t = useTranslations();
   return (
     <Flex
+      m="auto"
+      minWidth={"320px"}
+      width={"min-content"}
       direction={"column"}
       align={"start"}
-      m="auto"
-      width={"min-content"}
       gap={"2"}
     >
+      <Text size={"2"}>{t("title_contact_us")}</Text>
       <Copy content="support@smartmachines.pro" />
       <Copy content="+7 (977) 103-48-88" />
     </Flex>

@@ -34,7 +34,7 @@ export const HugePresentation = ({ ref, section }: PresentationProps) => {
         <Flex
           align={"center"}
           position={"absolute"}
-          style={{ transform: "translate(60px, -140px)" }}
+          style={{ transform: "translate(60px, -160px)" }}
           gap={"3"}
         >
           <Image
@@ -45,9 +45,6 @@ export const HugePresentation = ({ ref, section }: PresentationProps) => {
             height={58}
           />
           <Box className="elevated-card">
-            <Heading mb="2" size={"1"} weight={"bold"}>
-              {t("title_contact_us")}
-            </Heading>
             <Contacts />
           </Box>
         </Flex>
