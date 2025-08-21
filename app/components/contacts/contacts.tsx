@@ -51,7 +51,7 @@ export const Contacts = () => {
       gap={"2"}
     >
       <Text size={"2"}>{t("title_contact_us")}</Text>
-      <Copy content="support@smartmachines.pro" />
+      <Copy content="info@smartmachines.pro" />
       <Copy content="+7 (977) 103-48-88" />
     </Flex>
   );
