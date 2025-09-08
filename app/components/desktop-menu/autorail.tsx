@@ -2,14 +2,15 @@
 import { Box, Grid, Heading } from "@radix-ui/themes";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export const Autorail = () => {
   const t = useTranslations();
+  const locale = useLocale();
   return (
     <Grid width={"660px"} gapX={"6"} pt="6" columns={"2"} p="4">
       <Box>
-        <Link href="/auto?scroll=0">
+        <Link locale={locale} href="/auto?scroll=0">
           <Heading size={"1"} weight={"bold"}>
             {t("title_auto")}
           </Heading>
@@ -23,7 +24,7 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href="/auto?view=mile&scroll=1">
+          <Link locale={locale} href="/auto?view=mile&scroll=1">
             <Heading size={"2"} weight={"regular"}>
               {t("miles")}
             </Heading>
@@ -37,7 +38,7 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href="/auto?view=highway&scroll=1">
+          <Link locale={locale} href="/auto?view=highway&scroll=1">
             <Heading size={"2"} weight={"regular"}>
               {t("highway")}
             </Heading>
@@ -50,7 +51,7 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href="/auto?view=store&scroll=1">
+          <Link locale={locale} href="/auto?view=store&scroll=1">
             <Heading size={"2"} weight={"regular"}>
               {t("store")}
             </Heading>
@@ -58,7 +59,7 @@ export const Autorail = () => {
         </Grid>
       </Box>
       <Box>
-        <Link href="/rail?scroll=0">
+        <Link locale={locale} href="/rail?scroll=0">
           <Heading size={"1"} weight={"bold"}>
             {t("title_rail")}
           </Heading>
@@ -72,7 +73,7 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href={"/rail?view=invoice&scroll=1"}>
+          <Link locale={locale} href={"/rail?view=invoice&scroll=1"}>
             <Heading size={"2"} weight={"regular"}>
               {t("invoice")}
             </Heading>
@@ -85,7 +86,7 @@ export const Autorail = () => {
               height={38}
             />
           </Box>
-          <Link href={"/rail?view=dashboard&scroll=1"}>
+          <Link locale={locale} href={"/rail?view=dashboard&scroll=1"}>
             <Heading size={"2"} weight={"regular"}>
               {t("dashboard")}
             </Heading>
