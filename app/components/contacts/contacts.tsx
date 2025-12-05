@@ -47,10 +47,12 @@ export const Contacts = () => {
       minWidth={"320px"}
       width={"min-content"}
       direction={"column"}
-      align={"start"}
+      align={"center"}
       gap={"2"}
     >
-      <Text size={"2"}>{t("title_contact_us")}</Text>
+      <Text align={"center"} size={"2"}>
+        {t("title_contact_us")}
+      </Text>
       <Copy content="info@smartmachines.pro" />
       <Copy content="+7 (977) 103-48-88" />
     </Flex>
